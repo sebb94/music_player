@@ -1,0 +1,24 @@
+{
+  "name": "Music_player",
+  "version": "1.0.0",
+  "description": "Music_player",
+  "main": "/js/scripts.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  },
+  "scripts": {
+    "c:main": "node-sass scss/style.scss css/style.css",
+    "w:main": "nodemon -e scss -x \"npm run c:main\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebb94/music_player.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebb94/music_player/issues"
+  },
+  "homepage": "https://github.com/sebb94/music_player#readme"
+}

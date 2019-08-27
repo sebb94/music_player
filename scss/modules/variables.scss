@@ -1,0 +1,56 @@
+/**
+ * modules/variables
+ * ---
+ */
+
+
+/**
+ * Typography
+ */
+
+$font-family-base: 'Montserrat', sans-serif;
+$font-size-base: 140%;
+$line-height-base: 1.5;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+/**
+ * Colors
+ */
+
+$text-color: #000;
+$body-bg: #fff;
+$selection-bg: #04A4CC;
+/*$header-bg: #ffc800;*/
+$header-bg: #020c1a;
+
+$title-color: #FF1212;
+
+/**
+ * Grid
+ */
+
+$wrapper-width: 1580px;
+
+
+$padding-horizontal-base: 5px;
+$padding-vertical-base: 5px;
+$margin-horizontal-base: 5px;
+$margin-vertical-base: 5px;
+$margin-horizontal-large: 0;
+//$margin-horizontal-large: 50px;
+$margin-vertical-large: 15px;
+
+
+$slider-height: 790px;
+
+
+$header-height: 50px;
+$header-bg-color: rgba(0, 0, 0, .5);
+
+$content-width: 1580px;

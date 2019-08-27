@@ -1,0 +1,28 @@
+/**
+ * modules/mixins
+ * ---
+ */
+
+
+@mixin reset-box {
+  padding: 0;
+  margin: 0;
+}
+@mixin desktop-large-down {
+  @media (max-width: 1600px) { @content; }
+}
+@mixin desktop-medium-down {
+  @media (max-width: 1400px) { @content; }
+}
+@mixin desktop-small-down {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin desktop-very-small-down {
+  @media (max-width: 1024px) { @content; }
+}
+@mixin tablet-down {
+  @media (max-width: 768px) { @content; }
+}
+@mixin phone-down {
+  @media (max-width: 500px) { @content; }
+}

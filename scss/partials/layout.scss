@@ -1,0 +1,27 @@
+/**
+ * partials/layout
+ * ---
+ */
+html {
+    font-size: 20px;
+
+
+    @include desktop-large-down {
+
+        font-size: 17px;
+    }
+
+    @include desktop-medium-down {
+
+        font-size: 15px;
+    }
+
+
+
+}
+
+body {
+    background: #12a2a1;
+    margin: 10px;
+
+}
