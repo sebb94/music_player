@@ -1,6 +1,14 @@
+<?php 
+if ( isset($_POST['loginButton']) ){
+    echo "Login button was pressed";
+}
+if ( isset($_POST['registerButton']) ){
+    echo "Register button was pressed";
+}
+?>
+
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
