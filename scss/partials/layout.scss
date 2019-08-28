@@ -3,17 +3,17 @@
  * ---
  */
 html {
-    font-size: 20px;
+    font-size: 16px;
 
 
     @include desktop-large-down {
 
-        font-size: 17px;
+        font-size: 15px;
     }
 
     @include desktop-medium-down {
 
-        font-size: 15px;
+        font-size: 14px;
     }
 
 
@@ -21,7 +21,7 @@ html {
 }
 
 body {
-    background: #12a2a1;
+    background: #eee;
     margin: 10px;
 
 }
