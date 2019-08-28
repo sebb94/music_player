@@ -51,11 +51,13 @@ a {
   a:focus, a:hover {
     text-decoration: underline; }
 
+/*
 input[type="text"],
 input[type="search"] {
   font-size: inherit;
-  line-height: inherit; }
-
+  line-height: inherit;
+}
+*/
 ::selection {
   background-color: #04A4CC;
   color: #fff;
