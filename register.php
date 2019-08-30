@@ -1,10 +1,6 @@
 <?php 
-if ( isset($_POST['loginButton']) ){
-    echo "Login button was pressed";
-}
-if ( isset($_POST['registerButton']) ){
-    echo "Register button was pressed";
-}
+ include("includes/handlers/register-handler.php");
+
 ?>
 
 <!DOCTYPE html>
