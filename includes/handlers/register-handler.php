@@ -12,12 +12,28 @@ function sanitizeFormUsername($inputText){
 }
 
 function sanitizeString($inputText){
-    
     $inputText = strip_tags( $inputText );
     $inputText = str_replace( " " , "" , $inputText);
     $inputText =  ucfirst(strtolower( $inputText ));
     return $inputText;
 }
+
+function validateUsername( $un ){
+
+}
+function validateFirstName( $fn ){
+
+}
+function validateLastName( $ln ){
+
+}
+function validateEmails( $em, $em2 ){
+
+}
+function validatePasswords( $pw, $pw2 ){
+
+}
+
 
 if ( isset($_POST['loginButton']) ){
     echo "Login button was pressed";
@@ -30,7 +46,12 @@ if ( isset($_POST['registerButton']) ){
     $email2 = sanitizeString( $_POST['email2'] ) ; 
     $password = sanitizeFormPassword( $_POST['password']);
     $password2 = sanitizeFormPassword( $_POST['password2']);
-    echo $firstName . '<br>';
-    echo $lastName . '<br>';
+
+    validateUsername( $username );
+    validateFirstName( $firstName );
+    validateLastName( $lastName );
+    validateEmails( $email, $email2 );
+    validatePasswords( $password, $password2 );
+
 }
 ?>
