@@ -21,9 +21,16 @@
                 return false;
             }
         }
+        public function getError($error){
+            if( !in_array($error, $this->errorArray) ){
+                $error = "";
+            }
+            return "<span clsas='errorMessage'>". $error ."</span>";
+
+        }
         private function validateUsername( $un ){
            if( strlen($un) > 25  || strlen($un) < 5){
-                array_push($this->errorArray, "Your usename must be between 5 and 25 characters");
+                array_push($this->errorArray, "Your username must be between 5 and 25 characters");
                 return;
            }
            // TODO: check if username exist in db;
