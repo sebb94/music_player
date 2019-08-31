@@ -1,3 +1,16 @@
+<?php 
+include("includes/config.php");
+//logout manually
+//session_destroy();
+if (isset($_SESSION['userLoggedIn'])){
+    $username =  $_SESSION['userLoggedIn'];
+    echo "Logged as: " . $username; 
+}else{
+    header("Location:register.php");
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>

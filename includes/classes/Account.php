@@ -15,6 +15,7 @@
         $query = mysqli_query($this->con, "SELECT username, password FROM users WHERE username='$un' AND password = '$pw'");
 
         if(mysqli_num_rows($query) > 0){
+            $_SESSION['userLoggedIn'] = $un;
             header("Location:index.php");
             return;
         }else{
@@ -34,7 +35,10 @@
 
             if( empty( $this->errorArray) ){
                 // Insert into DB
-              return $this->insertUserDetils( $un, $fn, $ln, $em, $pw);
+            $_SESSION['userLoggedIn'] = $un;
+            $this->insertUserDetils( $un, $fn, $ln, $em, $pw);
+            header("Location:index.php");
+            return;
             }else{
                 return false;
             }
