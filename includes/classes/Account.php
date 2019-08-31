@@ -8,6 +8,23 @@
             $this->errorArray = array();
             $this->con = $con; 
         }
+        public function login($un, $pw){
+
+        $pw =  hash('sha512', $pw);
+
+        $query = mysqli_query($this->con, "SELECT username, password FROM users WHERE username='$un' AND password = '$pw'");
+
+        if(mysqli_num_rows($query) > 0){
+            header("Location:index.php");
+            return;
+        }else{
+            array_push($this->errorArray, Constants::$loginFail);
+            return false;
+        }
+        // TODO : make email and username seperate error
+
+
+        }
         public function register($un, $fn, $ln, $em, $em2, $pw, $pw2){
             $this->validateUsername( $un );
             $this->validateFirstName( $fn);

@@ -12,7 +12,7 @@
         public static $firstNameCharacters = "Your First Name must be between 5 and 25 characters!";
         public static $lastNameCharacters = "Your Last Name must be between 3 and 25 characters!";
 
-
+        public static $loginFail = "Your email or password was incorrect!";
 
 
     }
