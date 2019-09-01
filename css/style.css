@@ -176,7 +176,8 @@ body {
           transform: scale(1.05); }
     #register #login #loginText {
       width: 100%;
-      padding: 50px 25px; }
+      padding: 50px 25px;
+      margin-left: 20px; }
       #register #login #loginText h1 {
         color: #07d159;
         font-size: 60px;
@@ -187,6 +188,13 @@ body {
         margin: 35px 0; }
       #register #login #loginText ul {
         padding: 0; }
+        #register #login #loginText ul .register-li {
+          display: flex;
+          align-items: center; }
+        #register #login #loginText ul i {
+          font-family: "FontAwesome" !important;
+          font-size: 40px;
+          color: #07d159; }
         #register #login #loginText ul li {
           font-size: 20px;
           list-style-type: none;

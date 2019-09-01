@@ -22,7 +22,9 @@ function getInputValue($name){
     <title>Music Player - Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c9c259af04.js"></script>
     <script src="assets/js/register.js"></script>
     <script src="main.js"></script>
 </head>
@@ -125,9 +127,9 @@ function getInputValue($name){
                 <h1>Get great music, right now</h1>
                 <h2>Listen to amaizing music for free</h2>
                 <ul>
-                    <li>Discover great music</li>
-                    <li>Create Your own playlist</li>
-                    <li>Follow artist to keep up today</li>
+                <div class="register-li"><i class="fa fa-check" aria-hidden="true"></i><li>Discover great music</li></div>
+                <div class="register-li"><i class="fa fa-check" aria-hidden="true"></i><li>Create Your own playlist</li></div>
+                <div class="register-li"><i class="fa fa-check" aria-hidden="true"></i><li>Follow artist to keep up today</li></div>
                 </ul>
             </div>
         </div>
