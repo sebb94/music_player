@@ -100,3 +100,19 @@ body {
       font-weight: normal;
       line-height: 1em;
       box-sizing: border-box; }
+    #register #login #inputContainer {
+      padding: 20px;
+      float: left;
+      border-right: 1px solid #999; }
+      #register #login #inputContainer h2 {
+        text-align: center; }
+      #register #login #inputContainer input[type="text"],
+      #register #login #inputContainer input[type="email"],
+      #register #login #inputContainer input[type="password"] {
+        display: block;
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid #fff;
+        height: 27px;
+        line-height: 27px;
+        width: 100%; }
