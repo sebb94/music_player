@@ -84,3 +84,11 @@ body {
  * partials/header
  * ---
  */
+#register {
+  background: #000;
+  background-image: url("../assets/images/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  display: table;
+  width: 100%;
+  height: 100%; }
