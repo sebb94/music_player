@@ -114,7 +114,8 @@ body {
   background-image: url("../assets/images/bg.jpg");
   background-position: center;
   background-size: cover;
-  display: table;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 100%; }
   #register #login {
@@ -140,6 +141,10 @@ body {
           #register #login #inputContainer .hasAccountText span:hover {
             transform: scale(1.2);
             cursor: pointer; }
+      #register #login #inputContainer .errorMessage {
+        font-size: 12px;
+        color: #07d159;
+        display: block; }
       #register #login #inputContainer #registerForm,
       #register #login #inputContainer #loginForm {
         display: none; }
@@ -158,7 +163,8 @@ body {
       #register #login #inputContainer label {
         color: #a0a0a0;
         font-size: 13px;
-        margin-top: 15px; }
+        margin-top: 15px;
+        display: block; }
       #register #login #inputContainer button {
         background-color: transparent;
         border: 2px solid #fff;

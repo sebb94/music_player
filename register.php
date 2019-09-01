@@ -27,6 +27,12 @@ function getInputValue($name){
     <script src="https://kit.fontawesome.com/c9c259af04.js"></script>
     <script src="assets/js/register.js"></script>
     <script src="main.js"></script>
+    <script>     
+    $( document ).ready(function() {
+            $("#loginForm").show();
+            $("#registerForm").hide();
+    });
+    </script>
 </head>
 <body>
 

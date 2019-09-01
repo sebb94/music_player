@@ -47,7 +47,7 @@
             if( !in_array($error, $this->errorArray) ){
                 $error = "";
             }
-            return "<span clsas='errorMessage'>". $error ."</span>";
+            return "<span class='errorMessage'>". $error ."</span>";
 
         }
 
