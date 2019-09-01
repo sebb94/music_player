@@ -79,6 +79,32 @@ html {
 body {
   background: #e6b516; }
 
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #fff; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+  opacity: 1; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+  opacity: 1; }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff; }
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fff; }
+
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: #fff; }
+
 /**
  * partials/header
  * ---
@@ -116,3 +142,7 @@ body {
         height: 27px;
         line-height: 27px;
         width: 100%; }
+      #register #login #inputContainer label {
+        color: #a0a0a0;
+        font-size: 13px;
+        margin-top: 15px; }
