@@ -26,8 +26,31 @@ function getInputValue($name){
     <script src="assets/js/register.js"></script>
     <script src="main.js"></script>
 </head>
-
 <body>
+
+<?php 
+    if( isset($_POST['registerButton'])){
+        echo '<script>
+        $( document ).ready(function() {
+            $("#loginForm").hide();
+            $("#registerForm").show();
+        });
+        </script>
+        ';
+    }
+    if( isset($_POST['loginButton'])){
+        echo '<script>
+        $( document ).ready(function() {
+            $("#loginForm").show();
+            $("#registerForm").hide();
+        });
+        </script>
+        ';
+    }
+
+
+
+?>
     <section id="register"> 
         <div id="login">
             <div id="inputContainer">

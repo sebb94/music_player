@@ -139,6 +139,9 @@ body {
           #register #login #inputContainer .hasAccountText span:hover {
             transform: scale(1.2);
             cursor: pointer; }
+      #register #login #inputContainer #registerForm,
+      #register #login #inputContainer #loginForm {
+        display: none; }
       #register #login #inputContainer h2 {
         text-align: center; }
       #register #login #inputContainer input[type="text"],
