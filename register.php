@@ -47,9 +47,6 @@ function getInputValue($name){
         </script>
         ';
     }
-
-
-
 ?>
     <section id="register"> 
         <div id="login">
@@ -122,6 +119,16 @@ function getInputValue($name){
                             <span id="hideRegister">Already have an account? Log in here?</span>
                     </div>
                 </form>
+            </div>
+
+            <div id="loginText">
+                <h1>Get great music, right now</h1>
+                <h2>Listen to amaizing music for free</h2>
+                <ul>
+                    <li>Discover great music</li>
+                    <li>Create Your own playlist</li>
+                    <li>Follow artist to keep up today</li>
+                </ul>
             </div>
         </div>
     </section>

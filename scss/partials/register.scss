@@ -11,6 +11,7 @@
     & #login{
         width: 80%;
         margin: 0 auto;
+        display:flex;
         & *{
             color:$white;
             font-family: "Helvetica Neue", "Heltevica", "Arial", sans-serif;
@@ -21,9 +22,8 @@
   
         & #inputContainer{
             padding: 20px;
-            float:left;
+            width: 50%;
             border-right: 1px solid #999;
-
             & .hasAccountText{
                 text-align: center;
                 & span{
@@ -81,6 +81,34 @@
             }
         }
 
+        & #loginText{
+            width:100%;
+            padding: 50px 25px;
+
+
+            & h1{
+                color: #07d159;
+                font-size: 60px;
+                font-weight: bold;
+                margin:0;
+           
+            }
+            & h2{
+                color: $white;
+                margin: 35px 0;
+               
+            }
+
+            & ul{
+                padding: 0;
+
+                & li{
+                    font-size: 20px;
+                    list-style-type: none;
+                    padding: 15px;
+                }
+            }
+        }
 
     }
 
