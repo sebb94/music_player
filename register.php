@@ -22,6 +22,8 @@ function getInputValue($name){
     <title>Music Player - Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="assets/js/register.js"></script>
     <script src="main.js"></script>
 </head>
 
@@ -38,9 +40,14 @@ function getInputValue($name){
                     </p>
                     <p>
                         <label for="loginPassword">Password:</label>
-                        <input id="loginPassword" name="loginPassword" type="password" required>
+                        <input id="loginPassword" name="loginPassword" placeholder="Your password" type="password" required>
                     </p>
                     <button type="submit" name="loginButton">LOG IN</button>
+
+                        <div class="hasAccountText">
+                            <span id="hideLogin">Don't have an account? Sign up here.</span>
+
+                        </div>
                 </form>
 
                 <form id="registerForm" action="register.php" method="POST">
@@ -88,6 +95,9 @@ function getInputValue($name){
                         <input id="password2" name="password2" type="password" placeholder="Confirm password" required>
                     </p>
                     <button type="submit" name="registerButton">SIGN UP</button>
+                    <div class="hasAccountText">
+                            <span id="hideRegister">Already have an account? Log in here?</span>
+                    </div>
                 </form>
             </div>
         </div>

@@ -130,6 +130,15 @@ body {
       padding: 20px;
       float: left;
       border-right: 1px solid #999; }
+      #register #login #inputContainer .hasAccountText {
+        text-align: center; }
+        #register #login #inputContainer .hasAccountText span {
+          font-weight: bold;
+          font-size: 12px;
+          transition: all .4s; }
+          #register #login #inputContainer .hasAccountText span:hover {
+            transform: scale(1.2);
+            cursor: pointer; }
       #register #login #inputContainer h2 {
         text-align: center; }
       #register #login #inputContainer input[type="text"],
@@ -146,3 +155,18 @@ body {
         color: #a0a0a0;
         font-size: 13px;
         margin-top: 15px; }
+      #register #login #inputContainer button {
+        background-color: transparent;
+        border: 2px solid #fff;
+        border-radius: 250px;
+        color: #fff;
+        display: block;
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin: 20px auto;
+        height: 41px;
+        width: 100%;
+        transition: all .4s; }
+        #register #login #inputContainer button:hover {
+          cursor: pointer;
+          transform: scale(1.05); }
