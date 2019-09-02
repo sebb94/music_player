@@ -22,6 +22,13 @@ if (isset($_SESSION['userLoggedIn'])){
     <script src="main.js"></script>
 </head>
 <body>
-    Hello World!! 
+   
+    <section id="nowPlayingBarContainer">
+    
+    
+    
+    
+    </section>
+
 </body>
 </html>
