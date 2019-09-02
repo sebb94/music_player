@@ -4,7 +4,7 @@
  */
 html {
     font-size: 16px;
-
+      height: 100%;
 
     @include desktop-large-down {
 
@@ -21,7 +21,8 @@ html {
 }
 
 body {
-    background: #e6b516;
+    background: #fee;
+    height: 100%;
 }
 
 ::-webkit-input-placeholder {
