@@ -1,32 +1,64 @@
-
-
-#nowPlayingBarContainer{
+#nowPlayingBarContainer {
     background-color: #282828;
     width: 100%;
     position: fixed;
     min-width: 600px;
     bottom: 0;
 
-    & #nowPlayingBar{
-         height: 90px; // remove later
-         display: flex;
-         padding: 16px;
-         box-sizing: border-box;     
+    & #nowPlayingBar {
+        height: 90px; // remove later
+        display: flex;
+        padding: 16px;
+        box-sizing: border-box;
 
+        & .content {
+            width: 100%;
+        }
 
-         & #nowPlayingLeft,
-         & #nowPlayingRight {
+        & #nowPlayingLeft,
+        & #nowPlayingRight {
             width: 30%;
             min-width: 180px;
-         }
+        }
 
-         & #nowPlayingCenter {
+        & #nowPlayingCenter {
             width: 40%;
             max-width: 700px;
             display: flex;
             flex-direction: column;
-            align-items: center; 
-        }  
+            align-items: center;
+
+            & .playerControls {
+
+                & .buttons {
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    & .controlButton {
+                        background-color: transparent;
+                        border: none;
+                        margin: 0 15px;
+                        transition: all .1s;
+                        &:hover{
+                            cursor: pointer;
+                            transform: scale(1.03);
+                        }
+
+                        & i {
+                            font-size: 18px;
+                            color: $white;
+
+                            &.fa-play-circle,
+                            &.fa-play-pause{
+                                font-size: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
 }

@@ -41,7 +41,18 @@ if (isset($_SESSION['userLoggedIn'])){
             </div>
 
             <div id="nowPlayingCenter">
-            
+                    <div class="content playerControls">
+
+                        <div class="buttons">
+                            <button class="controlButton shuffle" title="Shuffle button"><i class="fa fa-random" aria-hidden="true"></i></button>
+                             <button class="controlButton previous" title="Previous button"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+                            <button class="controlButton play" title="Play button"><i class="fa fa-play-circle" aria-hidden="true"></i></button>
+                            <button class="controlButton pause" style="display:none;" title="Pause button"><i class="fa fa-pause"  aria-hidden="true"></i></button>
+                            <button class="controlButton next" title="Next button"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+                            <button class="controlButton repeat" title="Repeat button"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+
+                        </div>
+                    </div>
             </div>
 
             <div id="nowPlayingRight">

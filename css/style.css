@@ -219,6 +219,8 @@ body {
     display: flex;
     padding: 16px;
     box-sizing: border-box; }
+    #nowPlayingBarContainer #nowPlayingBar .content {
+      width: 100%; }
     #nowPlayingBarContainer #nowPlayingBar #nowPlayingLeft,
     #nowPlayingBarContainer #nowPlayingBar #nowPlayingRight {
       width: 30%;
@@ -229,3 +231,20 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center; }
+      #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playerControls .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playerControls .buttons .controlButton {
+          background-color: transparent;
+          border: none;
+          margin: 0 15px;
+          transition: all .1s; }
+          #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playerControls .buttons .controlButton:hover {
+            cursor: pointer;
+            transform: scale(1.03); }
+          #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playerControls .buttons .controlButton i {
+            font-size: 18px;
+            color: #fff; }
+            #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playerControls .buttons .controlButton i.fa-play-circle, #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playerControls .buttons .controlButton i.fa-play-pause {
+              font-size: 32px; }
