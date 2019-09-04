@@ -221,6 +221,10 @@ body {
     #nowPlayingBarContainer #nowPlayingBar .content {
       width: 100%;
       height: 57px; }
+    #nowPlayingBarContainer #nowPlayingBar #nowPlayingLeft,
+    #nowPlayingBarContainer #nowPlayingBar #nowPlayingRight {
+      width: 30%;
+      min-width: 180px; }
     #nowPlayingBarContainer #nowPlayingBar #nowPlayingLeft .content {
       display: flex; }
       #nowPlayingBarContainer #nowPlayingBar #nowPlayingLeft .content .albumLink .albumArtwork {
@@ -238,10 +242,6 @@ body {
         #nowPlayingBarContainer #nowPlayingBar #nowPlayingLeft .content .trackInfo .artistName {
           font-size: 14px;
           color: #a0a0a0; }
-    #nowPlayingBarContainer #nowPlayingBar #nowPlayingLeft,
-    #nowPlayingBarContainer #nowPlayingBar #nowPlayingRight {
-      width: 30%;
-      min-width: 180px; }
     #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter {
       width: 40%;
       max-width: 700px;
@@ -291,3 +291,36 @@ body {
           font-size: 11px;
           min-width: 40px;
           text-align: center; }
+    #nowPlayingBarContainer #nowPlayingBar #nowPlayingRight {
+      display: flex;
+      align-items: center; }
+      #nowPlayingBarContainer #nowPlayingBar #nowPlayingRight .controlButton {
+        background-color: transparent;
+        border: none;
+        margin: 0 15px;
+        transition: all .1s; }
+        #nowPlayingBarContainer #nowPlayingBar #nowPlayingRight .controlButton i {
+          font-size: 32px;
+          color: #eee; }
+      #nowPlayingBarContainer #nowPlayingBar #nowPlayingRight .volumeBar {
+        display: flex;
+        height: 57px;
+        align-items: center; }
+        #nowPlayingBarContainer #nowPlayingBar #nowPlayingRight .volumeBar .progressBar {
+          width: 180px;
+          height: 16px;
+          display: flex;
+          align-items: center;
+          cursor: pointer; }
+          #nowPlayingBarContainer #nowPlayingBar #nowPlayingRight .volumeBar .progressBar .progressBarBg {
+            background-color: #404040;
+            height: 4px;
+            width: 100%;
+            border-radius: 2px;
+            display: flex;
+            align-items: center; }
+            #nowPlayingBarContainer #nowPlayingBar #nowPlayingRight .volumeBar .progressBar .progressBarBg .progress {
+              background-color: #a0a0a0;
+              height: 4px;
+              width: 0;
+              border-radius: 2px; }

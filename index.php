@@ -68,7 +68,7 @@ if (isset($_SESSION['userLoggedIn'])){
                     </div>
                     <div class="playbackBar">
                         <span class="progressTime current">0.00</span>
-                        <div class="progressBar">
+                    <div class="progressBar">
                             <div class="progressBarBg">
                                 <div class="progress"></div>
                             </div>
@@ -79,7 +79,17 @@ if (isset($_SESSION['userLoggedIn'])){
             </div>
 
             <div id="nowPlayingRight">
-
+                    <div class="volumeBar">
+                        <button class="controlButton volume" title="Volume button"><i class="fa fa-volume-up" aria-hidden="true"></i></button>
+                     
+                    <div class="progressBar">
+                            <div class="progressBarBg">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
 
             </div>
         </div>
