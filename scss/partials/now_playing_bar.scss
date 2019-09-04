@@ -12,7 +12,22 @@
 
         & .content {
             width: 100%;
+            height: 57px;
         }
+
+        & #nowPlayingLeft{
+            & .content{
+                & .albumLink{
+                    & .albumArtwork{
+                        height: 100%;
+                        max-width: 57px;
+                        margin-right: 15px;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+        
 
         & #nowPlayingLeft,
         & #nowPlayingRight {

@@ -219,7 +219,13 @@ body {
     padding: 16px;
     box-sizing: border-box; }
     #nowPlayingBarContainer #nowPlayingBar .content {
-      width: 100%; }
+      width: 100%;
+      height: 57px; }
+    #nowPlayingBarContainer #nowPlayingBar #nowPlayingLeft .content .albumLink .albumArtwork {
+      height: 100%;
+      max-width: 57px;
+      margin-right: 15px;
+      background-size: cover; }
     #nowPlayingBarContainer #nowPlayingBar #nowPlayingLeft,
     #nowPlayingBarContainer #nowPlayingBar #nowPlayingRight {
       width: 30%;

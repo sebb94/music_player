@@ -26,21 +26,17 @@ if (isset($_SESSION['userLoggedIn'])){
     <script src="assets/js/register.js"></script>
     <script src="main.js"></script>
 </head>
-
+ 
 <body>
 
     <section id="nowPlayingBarContainer">
         <div id="nowPlayingBar">
             <div id="nowPlayingLeft">
-                <i class="fa fa-play" aria-hidden="true"></i>
-                <i class="fa fa-pause" aria-hidden="true"></i>
-                <i class="fa fa-step-forward" aria-hidden="true"></i>
-                <i class="fa fa-step-backward" aria-hidden="true"></i>
-                <i class="fa fa-random" aria-hidden="true"></i>
-                <i class="fa fa-repeat" aria-hidden="true"></i>
-                <i class="fa fa-volume-up" aria-hidden="true"></i>
-                <i class="fa fa-volume-down" aria-hidden="true"></i>
-                <i class="fa fa-volume-off" aria-hidden="true"></i>
+                <div class="content">
+                        <span class="albumLink">
+                                <img class="albumArtwork" src="assets/images/square.png">
+                        </span>
+                </div>
             </div>
 
             <div id="nowPlayingCenter">
