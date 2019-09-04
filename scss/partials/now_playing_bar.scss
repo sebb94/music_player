@@ -6,7 +6,6 @@
     bottom: 0;
 
     & #nowPlayingBar {
-        height: 90px; // remove later
         display: flex;
         padding: 16px;
         box-sizing: border-box;
@@ -57,6 +56,25 @@
                         }
                     }
                 }
+            }
+
+            & .playbackBar{
+                display: flex;
+
+                & .progressBar{
+                    width: 100%;
+                    height: 12px;
+                    display: inline-flex;
+                    cursor: pointer;
+                }
+
+                & .progressTime{
+                    color: #a0a0a0;
+                    font-size: 11px;
+                    min-width: 40px;
+                    text-align: center;
+                }
+
             }
         }
     }

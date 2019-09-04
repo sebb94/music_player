@@ -215,7 +215,6 @@ body {
   min-width: 600px;
   bottom: 0; }
   #nowPlayingBarContainer #nowPlayingBar {
-    height: 90px;
     display: flex;
     padding: 16px;
     box-sizing: border-box; }
@@ -248,3 +247,15 @@ body {
             color: #fff; }
             #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playerControls .buttons .controlButton i.fa-play-circle, #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playerControls .buttons .controlButton i.fa-play-pause {
               font-size: 32px; }
+      #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playbackBar {
+        display: flex; }
+        #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playbackBar .progressBar {
+          width: 100%;
+          height: 12px;
+          display: inline-flex;
+          cursor: pointer; }
+        #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playbackBar .progressTime {
+          color: #a0a0a0;
+          font-size: 11px;
+          min-width: 40px;
+          text-align: center; }
