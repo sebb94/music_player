@@ -36,8 +36,18 @@ if (isset($_SESSION['userLoggedIn'])){
                         <span class="albumLink">
                                 <img class="albumArtwork" src="assets/images/square.png">
                         </span>
+                        <div class="trackInfo">
+                            <span class="trackName">
+                                Życie ostre jak maczeta
+                            </span>
+                            <span class="artistName">
+                                WaszkaG
+                            </span>
+                        
+
                 </div>
             </div>
+        </div>
 
             <div id="nowPlayingCenter">
                 <div class="content playerControls">

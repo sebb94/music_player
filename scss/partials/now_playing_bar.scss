@@ -17,6 +17,7 @@
 
         & #nowPlayingLeft{
             & .content{
+                display: flex;
                 & .albumLink{
                     & .albumArtwork{
                         height: 100%;
@@ -25,7 +26,22 @@
                         background-size: cover;
                     }
                 }
+
+            & .trackInfo{
+                color: $white;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                & .trackName{
+                    font-size: 17px;
+                }
+                & .artistName{
+                    font-size: 14px;
+                    color: #a0a0a0;
+                }
             }
+            }
+
         }
         
 
@@ -49,6 +65,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    margin-bottom: 5px;
 
                     & .controlButton {
                         background-color: transparent;
