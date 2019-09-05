@@ -222,12 +222,33 @@ body {
       padding: 25px;
       display: flex;
       flex-direction: column; }
-      #mainContainer #topContainer #navBarContainer .navbar a {
+      #mainContainer #topContainer #navBarContainer .navbar .logo {
         display: flex;
-        justify-content: center; }
-      #mainContainer #topContainer #navBarContainer .navbar i {
+        justify-content: center;
+        color: #fff;
+        margin-bottom: 20px; }
+      #mainContainer #topContainer #navBarContainer .navbar i.fa-microphone {
         color: #fff;
         font-size: 32px; }
+      #mainContainer #topContainer #navBarContainer .navbar i.fa-search {
+        color: #fff;
+        font-size: 25px; }
+      #mainContainer #topContainer #navBarContainer .navbar .group {
+        border-top: 1px solid #a0a0a0;
+        padding: 10px 0; }
+        #mainContainer #topContainer #navBarContainer .navbar .group .navItem {
+          padding: 10px 0;
+          font-size: 16px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          display: block;
+          text-align: center; }
+          #mainContainer #topContainer #navBarContainer .navbar .group .navItem .navItemLink {
+            color: #a0a0a0;
+            text-decoration: none;
+            transition: all .4s; }
+            #mainContainer #topContainer #navBarContainer .navbar .group .navItem .navItemLink:hover {
+              color: #fff; }
 
 #nowPlayingBarContainer {
   background-color: #282828;

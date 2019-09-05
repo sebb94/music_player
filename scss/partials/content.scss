@@ -17,14 +17,45 @@
                 display: flex;
                 flex-direction: column;
 
-                & a{
+                & .logo{
                     display: flex;
                     justify-content: center;
+                    color: $white;
+                    margin-bottom: 20px;
                 }
 
-                & i{
+                & i.fa-microphone{
                     color:$white;
                     font-size: 32px;
+                }
+                & i.fa-search {
+                       color: $white;
+                       font-size: 25px;
+                   }
+
+                & .group{
+                    border-top: 1px solid #a0a0a0;
+                    padding: 10px 0;
+
+                    & .navItem{
+                        padding: 10px 0;
+                        font-size: 16px;
+                        font-weight: 700;
+                        letter-spacing: 2px;
+                        display: block;
+                        text-align: center;
+
+                        & .navItemLink{
+                            color: #a0a0a0;
+                            text-decoration: none;
+                            transition: all .4s;
+
+                            &:hover{
+                                color: $white;
+                            }
+                           
+                        }
+                    }
                 }
             }
         }
