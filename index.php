@@ -28,8 +28,16 @@ if (isset($_SESSION['userLoggedIn'])){
 </head>
  
 <body>
+    <div id="mainContainer">
 
-    <section id="nowPlayingBarContainer">
+    <div id="topContainer">
+
+        a
+    
+    
+    </div>
+    
+     <section id="nowPlayingBarContainer">
         <div id="nowPlayingBar">
             <div id="nowPlayingLeft">
                 <div class="content">
@@ -94,6 +102,11 @@ if (isset($_SESSION['userLoggedIn'])){
             </div>
         </div>
     </section>
+
+
+    </div>
+
+   
 
 </body>
 

@@ -208,6 +208,10 @@ body {
           list-style-type: none;
           padding: 15px; }
 
+#mainContainer #topContainer {
+  min-height: 100%;
+  width: 100%; }
+
 #nowPlayingBarContainer {
   background-color: #282828;
   width: 100%;
