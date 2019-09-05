@@ -3,5 +3,30 @@
     & #topContainer{
         min-height: 100%;
         width: 100%;
+
+        & #navBarContainer{
+            background: $black;
+            width: 20vw;
+            height: 100vh;
+            position: fixed;
+            top:0;
+            left:0;
+
+            & .navbar{
+                padding: 25px;
+                display: flex;
+                flex-direction: column;
+
+                & a{
+                    display: flex;
+                    justify-content: center;
+                }
+
+                & i{
+                    color:$white;
+                    font-size: 32px;
+                }
+            }
+        }
     }
 }

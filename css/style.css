@@ -211,6 +211,23 @@ body {
 #mainContainer #topContainer {
   min-height: 100%;
   width: 100%; }
+  #mainContainer #topContainer #navBarContainer {
+    background: #000;
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0; }
+    #mainContainer #topContainer #navBarContainer .navbar {
+      padding: 25px;
+      display: flex;
+      flex-direction: column; }
+      #mainContainer #topContainer #navBarContainer .navbar a {
+        display: flex;
+        justify-content: center; }
+      #mainContainer #topContainer #navBarContainer .navbar i {
+        color: #fff;
+        font-size: 32px; }
 
 #nowPlayingBarContainer {
   background-color: #282828;

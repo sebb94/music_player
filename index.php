@@ -4,7 +4,6 @@ include("includes/config.php");
 //session_destroy();
 if (isset($_SESSION['userLoggedIn'])){
     $username =  $_SESSION['userLoggedIn'];
-    echo "Logged as: " . $username; 
 }else{
     header("Location:register.php");
 }
@@ -32,7 +31,15 @@ if (isset($_SESSION['userLoggedIn'])){
 
     <div id="topContainer">
 
-        a
+        <section id="navBarContainer">
+            <nav class="navbar">
+                <a href="index.php" class="logo">
+                    <i class="fa fa-microphone" aria-hidden="true"></i>
+                </a>
+            
+            </nav>
+
+        </section>
     
     
     </div>
