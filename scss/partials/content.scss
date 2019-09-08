@@ -59,5 +59,14 @@
                 }
             }
         }
+
+        & #mainViewContainer{
+            margin-left: 20vw;
+            padding-bottom: 90px;
+            width: calc(100% - 20vw);
+            & #mainContent{
+                padding: 0 20px;
+            }
+        }
     }
 }

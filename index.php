@@ -33,6 +33,8 @@ if (isset($_SESSION['userLoggedIn'])){
         <section id="navBarContainer">
             <?php include("includes/navBar.php");?>
         </section>
+
+         <?php include("includes/mainView.php");?>
      </div>
         <section id="nowPlayingBarContainer">
              <?php include("includes/nowPlayingBar.php");?>

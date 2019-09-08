@@ -3,23 +3,24 @@
  * ---
  */
 html {
-    font-size: 16px;
+    font-size: 14px;
     height: 100%;
 
     @include desktop-large-down {
 
-        font-size: 15px;
+        font-size: 13px;
     }
 
     @include desktop-medium-down {
 
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
 body {
-    background: #fee;
+    background: #3e3e3e;
     height: 100%;
+    min-width: 720px;
 }
 
 ::-webkit-input-placeholder {
