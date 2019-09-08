@@ -255,7 +255,8 @@ body {
     padding-bottom: 90px;
     width: calc(100% - 20vw); }
     #mainContainer #topContainer #mainViewContainer #mainContent {
-      padding: 0 20px; }
+      padding: 0 20px;
+      color: #fff; }
 
 #nowPlayingBarContainer {
   background-color: #282828;
