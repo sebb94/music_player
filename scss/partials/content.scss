@@ -110,6 +110,14 @@
                                }
                         }
                         
+                        & a{
+                            transition: all .4s;
+                            text-decoration: none;
+                            color: $white;
+                            & :hover ~ .gridViewInfo{
+                             transform: scale(1.15) skewX(8deg) skewY(-2deg);
+                            }
+                        }
                         & .gridViewInfo{
                            font-weight: 300;
                            text-align: center;
@@ -117,6 +125,7 @@
                            overflow: hidden;
                            white-space: nowrap;
                            width: 100%;
+                           transition:  all .4s;
                         }
                     }
                 }
