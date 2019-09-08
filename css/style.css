@@ -257,6 +257,46 @@ body {
     #mainContainer #topContainer #mainViewContainer #mainContent {
       padding: 0 20px;
       color: #fff; }
+      #mainContainer #topContainer #mainViewContainer #mainContent .pageHeadingBig {
+        text-align: center; }
+      #mainContainer #topContainer #mainViewContainer #mainContent .gridViewContainer {
+        display: flex;
+        flex-wrap: wrap; }
+        #mainContainer #topContainer #mainViewContainer #mainContent .gridViewContainer .gridViewItem {
+          box-sizing: border-box;
+          width: calc(25% - 20px);
+          margin-left: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 30px; }
+          @media (max-width: 1200px) {
+            #mainContainer #topContainer #mainViewContainer #mainContent .gridViewContainer .gridViewItem {
+              width: calc(33% - 20px);
+              margin-left: 20px; } }
+          @media (max-width: 1024px) {
+            #mainContainer #topContainer #mainViewContainer #mainContent .gridViewContainer .gridViewItem {
+              width: calc(50% - 20px);
+              margin-left: 20px; } }
+          @media (max-width: 500px) {
+            #mainContainer #topContainer #mainViewContainer #mainContent .gridViewContainer .gridViewItem {
+              width: 100%;
+              margin-left: 0px; } }
+          #mainContainer #topContainer #mainViewContainer #mainContent .gridViewContainer .gridViewItem img {
+            width: 100%;
+            margin-bottom: 20px; }
+            @media (max-width: 500px) {
+              #mainContainer #topContainer #mainViewContainer #mainContent .gridViewContainer .gridViewItem img {
+                display: block;
+                width: 50%; } }
+          #mainContainer #topContainer #mainViewContainer #mainContent .gridViewContainer .gridViewItem .gridViewInfo {
+            font-weight: 300;
+            text-align: center;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%; }
 
 #nowPlayingBarContainer {
   background-color: #282828;

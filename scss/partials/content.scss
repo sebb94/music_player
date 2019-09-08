@@ -67,6 +67,59 @@
             & #mainContent{
                 padding: 0 20px;
                 color: $white;
+
+                & .pageHeadingBig{
+                    text-align: center;
+                }
+                & .gridViewContainer{
+                    display: flex; 
+                    flex-wrap: wrap;
+                    
+                    & .gridViewItem{
+                        box-sizing: border-box;
+                        width: calc(25% - 20px);
+                        margin-left:20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 30px;
+
+                        @include desktop-small-down {
+                         width: calc(33% - 20px);
+                         margin-left:20px;
+                        }
+
+                        @include desktop-very-small-down {
+                              width: calc(50% - 20px);
+                              margin-left:20px;
+                        }
+                          @include phone-down {
+                              width: 100%;
+                              margin-left: 0px;
+                          }
+
+                        & img{
+                            width: 100%;
+                            margin-bottom: 20px;
+
+                               @include phone-down {
+                                   display: block;
+                                   width: 50%;
+                                  
+                               }
+                        }
+                        
+                        & .gridViewInfo{
+                           font-weight: 300;
+                           text-align: center;
+                           text-overflow: ellipsis;
+                           overflow: hidden;
+                           white-space: nowrap;
+                           width: 100%;
+                        }
+                    }
+                }
             }
         }
     }
