@@ -306,6 +306,20 @@ body {
             width: 100%;
             transition: all .4s; }
 
+.entityInfo {
+  padding: 40px 0 10px 0;
+  display: flex; }
+  .entityInfo .leftSection {
+    width: 30%;
+    display: flex;
+    justify-content: center; }
+  .entityInfo .rightSection {
+    margin-left: 20px; }
+    .entityInfo .rightSection h2 {
+      margin-top: 0; }
+    .entityInfo .rightSection span {
+      color: #939393; }
+
 #nowPlayingBarContainer {
   background-color: #282828;
   width: 100%;

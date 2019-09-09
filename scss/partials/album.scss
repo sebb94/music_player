@@ -1,0 +1,21 @@
+.entityInfo{
+    padding: 40px 0 10px 0;
+    display: flex;
+
+    & .leftSection{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+    }
+
+    & .rightSection {
+        margin-left: 20px;
+
+        & h2{
+            margin-top: 0;
+        }
+        & span{
+            color: #939393;
+        }
+    }
+}
