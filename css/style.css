@@ -285,7 +285,8 @@ body {
               margin-left: 0px; } }
           #mainContainer #topContainer #mainViewContainer #mainContent .gridViewContainer .gridViewItem img {
             width: 100%;
-            margin-bottom: 20px; }
+            margin-bottom: 20px;
+            max-width: 200px; }
             @media (max-width: 500px) {
               #mainContainer #topContainer #mainViewContainer #mainContent .gridViewContainer .gridViewItem img {
                 display: block;
