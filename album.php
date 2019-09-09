@@ -5,11 +5,14 @@
 }else{
     header("Location: index.php");
 }
-$albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE id='$albumId'");
-$album = mysqli_fetch_array($albumQuery);
-echo $album['title'] . "<br>";
-$artist = new Artist($con, $album['artist']);
+
+$album = new Album($con, $albumId );
+$artist =  $album->getArtist();
+echo $album->getTitle() . "<br>"; 
 echo $artist->getName();
+
+
+
 ?>
 
 <?php include("includes/footer.php");?>
