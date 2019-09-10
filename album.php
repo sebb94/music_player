@@ -25,7 +25,22 @@ $artist =  $album->getArtist();
     <ul class="tracklist">
 
     <?php $songIdArray = $album->getSongIds(); 
-    print_r($songIdArray);
+    
+        $i = 1;
+        foreach( $songIdArray as $songId){
+
+            $albumSong = new Song($con, $songId);
+            $albumArtist =  $albumSong->getArtist();
+
+            echo '<li class="trackListRow">
+                <div class="trackCount">
+                    <button class="controlButton play" title="Play button"><i class="fa fa-play-circle" aria-hidden="true"></i></button>
+                    <span class="trackNumber">' . $i . '</span>
+                </div>
+            </li>
+            ';
+            $i++;
+        }
     
     ?>
 

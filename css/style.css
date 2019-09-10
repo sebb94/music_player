@@ -321,6 +321,20 @@ body {
       color: #939393;
       margin: 5px 0; }
 
+.tracklistContainer .tracklist .controlButton {
+  background-color: transparent;
+  border: none;
+  margin: 0 15px;
+  transition: all .1s; }
+  .tracklistContainer .tracklist .controlButton:hover {
+    cursor: pointer;
+    transform: scale(1.03); }
+  .tracklistContainer .tracklist .controlButton i {
+    font-size: 18px;
+    color: #fff; }
+    .tracklistContainer .tracklist .controlButton i.fa-play-circle, .tracklistContainer .tracklist .controlButton i.fa-play-pause {
+      font-size: 24px; }
+
 #nowPlayingBarContainer {
   background-color: #282828;
   width: 100%;

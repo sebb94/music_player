@@ -23,7 +23,28 @@
 .tracklistContainer{
 
     & .tracklist{
-        
+
+        & .controlButton {
+            background-color: transparent;
+            border: none;
+            margin: 0 15px;
+            transition: all .1s;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.03);
+            }
+
+              & i {
+                  font-size: 18px;
+                  color: $white;
+
+                  &.fa-play-circle,
+                  &.fa-play-pause {
+                      font-size: 24px;
+                  }
+              }
     }
 
+    }
 }
