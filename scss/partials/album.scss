@@ -1,8 +1,8 @@
-.entityInfo{
+.entityInfo {
     padding: 40px 0 10px 0;
     display: flex;
 
-    & .leftSection{
+    & .leftSection {
         width: 30%;
         display: flex;
         justify-content: center;
@@ -11,40 +11,101 @@
     & .rightSection {
         margin-left: 20px;
 
-        & h2{
+        & h2 {
             margin-top: 0;
         }
-        & p{
+
+        & p {
             color: #939393;
             margin: 5px 0;
         }
     }
 }
-.tracklistContainer{
 
-    & .tracklist{
+.tracklistContainer {
 
-        & .controlButton {
-            background-color: transparent;
-            border: none;
-            margin: 0 15px;
-            transition: all .1s;
+    & .tracklist {
+
+        list-style-type: none;
+
+        & .trackListRow {
+            display: flex;
+            margin: 10px 0;
+            padding: 5px;
+            color: #939393;
 
             &:hover {
+                background-color: #939393;
                 cursor: pointer;
-                transform: scale(1.03);
+                color: $white;
             }
 
-              & i {
-                  font-size: 18px;
-                  color: $white;
+            &:hover>.trackCount>.trackNumber {
+                display: none;
+            }
 
-                  &.fa-play-circle,
-                  &.fa-play-pause {
-                      font-size: 24px;
-                  }
-              }
-    }
+            &:hover>.trackCount .controlButton,
+            &:hover>.trackOptions {
+                opacity: 1;
+                cursor: pointer;
+            }
+
+            & .trackCount {
+                position: relative;
+                width: 10%;
+
+                & .controlButton {
+                    position: absolute;
+                    background-color: transparent;
+                    border: none;
+                    margin: 0;
+                    padding: 0;
+                    left: -2px;
+
+                    opacity: 0;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.03);
+
+                    }
+
+                    & i {
+                        font-size: 18px;
+                        color: $white;
+
+                        &.fa-play-circle,
+                        &.fa-play-pause {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+
+            & .trackInfo {
+                width: 50%;
+            }
+
+            & .trackOptions {
+                width: 20%;
+                background-color: transparent;
+                border: none;
+                margin: 0 15px;
+                transition: all .4s;
+                opacity: 0;
+            }
+
+            & .trackDuration {
+                width: 20%;
+                text-align: center;
+            }
+
+
+
+
+        }
+
+
 
     }
 }

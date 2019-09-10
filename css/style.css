@@ -321,19 +321,54 @@ body {
       color: #939393;
       margin: 5px 0; }
 
-.tracklistContainer .tracklist .controlButton {
-  background-color: transparent;
-  border: none;
-  margin: 0 15px;
-  transition: all .1s; }
-  .tracklistContainer .tracklist .controlButton:hover {
-    cursor: pointer;
-    transform: scale(1.03); }
-  .tracklistContainer .tracklist .controlButton i {
-    font-size: 18px;
-    color: #fff; }
-    .tracklistContainer .tracklist .controlButton i.fa-play-circle, .tracklistContainer .tracklist .controlButton i.fa-play-pause {
-      font-size: 24px; }
+.tracklistContainer .tracklist {
+  list-style-type: none; }
+  .tracklistContainer .tracklist .trackListRow {
+    display: flex;
+    margin: 10px 0;
+    padding: 5px;
+    color: #939393; }
+    .tracklistContainer .tracklist .trackListRow:hover {
+      background-color: #939393;
+      cursor: pointer;
+      color: #fff; }
+    .tracklistContainer .tracklist .trackListRow:hover > .trackCount > .trackNumber {
+      display: none; }
+    .tracklistContainer .tracklist .trackListRow:hover > .trackCount .controlButton,
+    .tracklistContainer .tracklist .trackListRow:hover > .trackOptions {
+      opacity: 1;
+      cursor: pointer; }
+    .tracklistContainer .tracklist .trackListRow .trackCount {
+      position: relative;
+      width: 10%; }
+      .tracklistContainer .tracklist .trackListRow .trackCount .controlButton {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+        left: -2px;
+        opacity: 0; }
+        .tracklistContainer .tracklist .trackListRow .trackCount .controlButton:hover {
+          cursor: pointer;
+          transform: scale(1.03); }
+        .tracklistContainer .tracklist .trackListRow .trackCount .controlButton i {
+          font-size: 18px;
+          color: #fff; }
+          .tracklistContainer .tracklist .trackListRow .trackCount .controlButton i.fa-play-circle, .tracklistContainer .tracklist .trackListRow .trackCount .controlButton i.fa-play-pause {
+            font-size: 24px; }
+    .tracklistContainer .tracklist .trackListRow .trackInfo {
+      width: 50%; }
+    .tracklistContainer .tracklist .trackListRow .trackOptions {
+      width: 20%;
+      background-color: transparent;
+      border: none;
+      margin: 0 15px;
+      transition: all .4s;
+      opacity: 0; }
+    .tracklistContainer .tracklist .trackListRow .trackDuration {
+      width: 20%;
+      text-align: center; }
 
 #nowPlayingBarContainer {
   background-color: #282828;
