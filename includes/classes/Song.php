@@ -1,6 +1,6 @@
 <?php 
 
-    class Album{
+    class Song{
 
         private $con;
         private $id;
