@@ -37,6 +37,19 @@ $artist =  $album->getArtist();
                     <button class="controlButton play" title="Play button"><i class="fa fa-play-circle" aria-hidden="true"></i></button>
                     <span class="trackNumber">' . $i . '</span>
                 </div>
+
+                <div class="trackInfo">
+                    <span class="trackName">' . $albumSong->getTitle() . '</span>
+                    <span class="artistName">' . $albumArtist->getName() . '</span>
+                </div>
+
+                <div class="trackOptions">
+                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </div>
+
+                <div class="trackDuration">
+                    <span class="duration">' . $albumSong->getDuration() . '</span>
+                </div>
             </li>
             ';
             $i++;
