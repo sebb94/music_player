@@ -22,10 +22,21 @@ function setTrack(trackId, newPlayList, play){
     audioElement.setTrack("assets/music/bensound-dubstep.mp3");
 
     if (play == true){
-        audioElement.play();
+        playSong();
     }
 }
-   
+
+function playSong(){
+    $('.controlButton.play').hide();
+    $('.controlButton.pause').show();
+    audioElement.play();
+}
+function pauseSong() {
+       $('.controlButton.play').show();
+    $('.controlButton.pause').hide();
+    audioElement.pause();  
+}
+
 
  </script>
  <div id="nowPlayingBar">
@@ -55,9 +66,9 @@ function setTrack(trackId, newPlayList, play){
                                     aria-hidden="true"></i></button>
                             <button class="controlButton previous" title="Previous button"><i
                                     class="fa fa-step-backward" aria-hidden="true"></i></button>
-                            <button class="controlButton play" title="Play button"><i class="fa fa-play-circle"
+                            <button class="controlButton play" title="Play button" onclick="playSong()"><i class="fa fa-play-circle"
                                     aria-hidden="true"></i></button>
-                            <button class="controlButton pause" style="display:none;" title="Pause button"><i
+                            <button class="controlButton pause" title="Pause button" onclick="pauseSong()"><i
                                     class="fa fa-pause" aria-hidden="true"></i></button>
                             <button class="controlButton next" title="Next button"><i class="fa fa-step-forward"
                                     aria-hidden="true"></i></button>

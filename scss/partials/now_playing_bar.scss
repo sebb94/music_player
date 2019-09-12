@@ -75,6 +75,10 @@
                         margin: 0 15px;
                         transition: all .1s;
 
+                         &.pause{
+                             display: none;
+                         }
+
                         &:hover {
                             cursor: pointer;
                             transform: scale(1.03);
@@ -85,7 +89,7 @@
                             color: $white;
 
                             &.fa-play-circle,
-                            &.fa-play-pause {
+                            &.fa-pause {
                                 font-size: 32px;
                             }
                         }
