@@ -11,8 +11,22 @@
  ?>
  
  <script>
- 
- console.log(<?php echo $jsonArray;?>);
+ $(document).ready(function () {
+    
+    currentPlayList = <?php echo $jsonArray;?>;
+    audioElement = new Audio();
+    setTrack(currentPlayList[0], currentPlayList, false);
+
+});
+function setTrack(trackId, newPlayList, play){
+    audioElement.setTrack("assets/music/bensound-dubstep.mp3");
+
+    if (play == true){
+        audioElement.play();
+    }
+}
+   
+
  </script>
  <div id="nowPlayingBar">
                 <div id="nowPlayingLeft">

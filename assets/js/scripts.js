@@ -1,3 +1,7 @@
+let currentPlayList = [];
+let audioElement;
+
+
 function Audio(){
 
     this.currentlyPlaying;
@@ -6,12 +10,11 @@ function Audio(){
     this.setTrack = function(src){
         this.audio.src = src;
     }
+
+    this.play = function(){
+       this.audio.play();
+    }
+
 }
 
-var audioElement = new Audio();
-audioElement.setTrack("assets/music/bensound-goinghigher.mp3");
-//audioElement.audio.play();
 
-$(document).ready(function () {
-    
-});
