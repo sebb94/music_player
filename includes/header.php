@@ -25,11 +25,15 @@ if (isset($_SESSION['userLoggedIn'])){
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c9c259af04.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
     <script src="assets/js/register.js"></script>
-    <script src="main.js"></script>
 </head>
 
 <body>
+
+
+
 <div id="mainContainer">
 
     <div id="topContainer">
