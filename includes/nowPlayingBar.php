@@ -25,6 +25,14 @@ function setTrack(trackId, newPlayList, play){
 
      let track = JSON.parse(data);
 
+     $('#nowPlayingBar .trackName').text(track.title);
+
+    $.post("includes/handlers/ajax/get-artist-json.php", {artistId : track.artist }, function(data){
+        let artist = JSON.parse(data);
+        
+         $('#nowPlayingBar .artistName').text(artist.name);
+
+    });
      audioElement.setTrack(track.path);
      //playSong();
     console.log(track);      
@@ -57,10 +65,10 @@ function pauseSong() {
                         </span>
                         <div class="trackInfo">
                             <span class="trackName">
-                                Życie ostre jak maczeta
+                                
                             </span>
                             <span class="artistName">
-                                WaszkaG
+                               
                             </span>
 
 
