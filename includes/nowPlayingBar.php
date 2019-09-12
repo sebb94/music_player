@@ -41,7 +41,7 @@ function setTrack(trackId, newPlayList, play){
 
 
 
-     audioElement.setTrack(track.path);
+     audioElement.setTrack(track);
      //playSong();
     console.log(track);      
 
@@ -53,6 +53,13 @@ function setTrack(trackId, newPlayList, play){
 }
 
 function playSong(){
+
+    if(audioElement.audio.currentTime == 0){
+         $.post("includes/handlers/ajax/update-plays.php", {songId : audioElement.currentlyPlaying.id }, function(data){
+    });
+    }
+
+
     $('.controlButton.play').hide();
     $('.controlButton.pause').show();
     audioElement.play();
