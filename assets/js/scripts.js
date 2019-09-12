@@ -11,3 +11,7 @@ function Audio(){
 var audioElement = new Audio();
 audioElement.setTrack("assets/music/bensound-goinghigher.mp3");
 //audioElement.audio.play();
+
+$(document).ready(function () {
+    
+});
