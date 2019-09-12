@@ -21,6 +21,16 @@
 function setTrack(trackId, newPlayList, play){
     audioElement.setTrack("assets/music/bensound-dubstep.mp3");
 
+    $.post("includes/handlers/ajax/get-song-json.php", {songId : trackId }, function(data){
+
+     let track = JSON.parse(data);
+
+     audioElement.setTrack(track.path);
+     //playSong();
+    console.log(track);      
+
+    });
+
     if (play == true){
         playSong();
     }
@@ -32,7 +42,7 @@ function playSong(){
     audioElement.play();
 }
 function pauseSong() {
-       $('.controlButton.play').show();
+    $('.controlButton.play').show();
     $('.controlButton.pause').hide();
     audioElement.pause();  
 }
