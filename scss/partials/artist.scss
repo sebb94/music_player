@@ -1,0 +1,11 @@
+.centerSection{
+    width: 100%;
+    & .artistInfo{
+
+        & .artistName{
+
+            color: $white;
+            text-align: center;
+        }
+    }
+}

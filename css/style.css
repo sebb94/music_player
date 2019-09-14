@@ -490,3 +490,9 @@ body {
               height: 4px;
               width: 0;
               border-radius: 2px; }
+
+.centerSection {
+  width: 100%; }
+  .centerSection .artistInfo .artistName {
+    color: #fff;
+    text-align: center; }
