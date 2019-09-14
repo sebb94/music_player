@@ -7,6 +7,8 @@ include("includes/classes/Song.php");
 //session_destroy();
 if (isset($_SESSION['userLoggedIn'])){
     $username =  $_SESSION['userLoggedIn'];
+    echo $username;
+    echo "<script>let userLoggedIn = '" . $username . "'; </script>";
 }else{
     header("Location:register.php");
 }
