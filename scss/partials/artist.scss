@@ -1,11 +1,12 @@
 .centerSection{
     width: 100%;
     & .artistInfo{
-
+        text-align: center;
         & .artistName{
-
             color: $white;
-            text-align: center;
+        }
+        & .headerbuttons{
+            
         }
     }
 }
