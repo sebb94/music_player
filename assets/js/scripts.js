@@ -3,6 +3,7 @@ let audioElement;
 let mouseDown = false;
 let currentIndex = 0;
 let repeat = false;
+let shuffle = false;
 
 function formatTime(songsSeconds){
 

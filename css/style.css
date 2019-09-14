@@ -430,7 +430,7 @@ body {
             color: #fff; }
             #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playerControls .buttons .controlButton i.fa-play-circle, #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playerControls .buttons .controlButton i.fa-pause {
               font-size: 32px; }
-            #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playerControls .buttons .controlButton i.fa-repeat-active {
+            #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playerControls .buttons .controlButton i.fa-repeat-active, #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playerControls .buttons .controlButton i.fa-shuffle-active {
               color: #31f317; }
       #nowPlayingBarContainer #nowPlayingBar #nowPlayingCenter .playbackBar {
         display: flex; }

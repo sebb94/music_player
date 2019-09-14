@@ -115,6 +115,12 @@ function setMute(){
     let volumeClasses = audioElement.audio.muted ? volumeButton.attr('class','fa fa-volume-off') : volumeButton.attr('class','fa fa-volume-up'); 
 
 }
+function setShuffle(){
+    shuffle = !shuffle;
+    let shuffleButton  =  $("#nowPlayingBar .playerControls .controlButton.shuffle i");
+   let shuffleClasses = shuffle  ? shuffleButton.addClass('fa-shuffle-active') : shuffleButton.removeClass('fa-shuffle-active');  
+
+}
 function setTrack(trackId, newPlayList, play){
     audioElement.setTrack("assets/music/bensound-dubstep.mp3");
 
@@ -196,7 +202,7 @@ function pauseSong() {
                     <div class="content playerControls">
 
                         <div class="buttons">
-                            <button class="controlButton shuffle" title="Shuffle button"><i class="fa fa-random"
+                            <button class="controlButton shuffle" title="Shuffle button" onclick="setShuffle();"><i class="fa fa-random"
                                     aria-hidden="true"></i></button>
                             <button class="controlButton previous" title="Previous button"><i
                                     class="fa fa-step-backward" aria-hidden="true" onclick="prevSong();"></i></button>
