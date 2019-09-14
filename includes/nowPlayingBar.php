@@ -107,8 +107,12 @@ function setRepeat(){
     console.log(repeatButton);
     console.log(repeat); 
     let repeatClasses = repeat ? repeatButton.addClass('fa-repeat-active') : repeatButton.removeClass('fa-repeat-active'); 
-   
 
+}
+function setMute(){
+    audioElement.audio.muted = ! audioElement.audio.muted
+    let volumeButton  =  $("#nowPlayingBar .volumeBar .volume i");
+    let volumeClasses = audioElement.audio.muted ? volumeButton.attr('class','fa fa-volume-off') : volumeButton.attr('class','fa fa-volume-up'); 
 
 }
 function setTrack(trackId, newPlayList, play){
@@ -219,7 +223,7 @@ function pauseSong() {
 
                 <div id="nowPlayingRight">
                     <div class="volumeBar">
-                        <button class="controlButton volume" title="Volume button"><i class="fa fa-volume-up"
+                        <button class="controlButton volume" title="Volume button" onclick="setMute();"><i class="fa fa-volume-up"
                                 aria-hidden="true"></i></button>
 
                         <div class="progressBar">
