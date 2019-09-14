@@ -13,9 +13,9 @@
  <script>
  $(document).ready(function () {
     
-    currentPlayList = <?php echo $jsonArray;?>;
+    let newPlayList = <?php echo $jsonArray;?>;
     audioElement = new Audio();
-    setTrack(currentPlayList[0], currentPlayList, false);
+    setTrack(newPlayList[0], newPlayList, false); 
     updateVolumeProgressBar(audioElement.audio);
 
     $("#nowPlayingBarContainer").on('mousedown touchstart mousemove touchmove',function(e){
@@ -71,7 +71,11 @@ function timeFromOffset(mouse, progressBar){
     audioElement.setTime(seconds);
 }
 function prevSong(){
-
+      if(repeat == true){
+        audioElement.setTime(0);
+        playSong();
+        return;
+    }
   
     if(currentIndex == 0){
         currentIndex = currentPlayList.length;
@@ -98,7 +102,7 @@ function nextSong() {
 		currentIndex++;
 	}
 
-    var trackToPlay = currentPlayList[currentIndex];
+    let trackToPlay = shuffle ? shufflePlayList[currentIndex]  : currentPlayList[currentIndex];
 	setTrack(trackToPlay, currentPlayList, true);
 }
 function setRepeat(){
@@ -118,13 +122,43 @@ function setMute(){
 function setShuffle(){
     shuffle = !shuffle;
     let shuffleButton  =  $("#nowPlayingBar .playerControls .controlButton.shuffle i");
-   let shuffleClasses = shuffle  ? shuffleButton.addClass('fa-shuffle-active') : shuffleButton.removeClass('fa-shuffle-active');  
+    let shuffleClasses = shuffle  ? shuffleButton.addClass('fa-shuffle-active') : shuffleButton.removeClass('fa-shuffle-active'); 
+
+        if(shuffle){
+            shuffleArray(shufflePlayList);
+            currentIndex = shufflePlayList.indexOf(audioElement.currentlyPlaying.id);
+        }else{
+            currentIndex = currentPlayList.indexOf(audioElement.currentlyPlaying.id);
+        }
 
 }
-function setTrack(trackId, newPlayList, play){
-    audioElement.setTrack("assets/music/bensound-dubstep.mp3");
 
-    currentIndex = currentPlayList.indexOf(trackId);
+function shuffleArray(a){
+let j,x,i;
+
+    for(i=a.length; i ;i--){
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
+    }
+}
+
+
+function setTrack(trackId, newPlayList, play){
+
+    if( newPlayList != currentPlayList){
+        currentPlayList = newPlayList;
+        shufflePlayList = currentPlayList.slice();
+        shuffleArray(shufflePlayList);
+    }
+    if(shuffle){
+         currentIndex = shufflePlayList.indexOf(trackId);
+    }else{
+        currentIndex = currentPlayList.indexOf(trackId);
+    }
+    console.log(currentPlayList );
+    console.log(shufflePlayList );
     pauseSong();
     console.log(play);
     $.post("includes/handlers/ajax/get-song-json.php", {songId : trackId }, function(data){
