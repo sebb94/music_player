@@ -415,6 +415,18 @@ input:focus {
   .artistsContainer .searchResultRow:hover {
     background-color: #2a2a2a; }
 
+.searchWrapper h2 {
+  text-align: center; }
+
+.searchWrapper .noResults {
+  margin: 15px;
+  color: red;
+  display: block;
+  font-weight: bold; }
+
+.searchWrapper .trackListContainer .trackList {
+  padding-left: 0; }
+
 #nowPlayingBarContainer {
   background-color: #282828;
   width: 100%;

@@ -28,3 +28,19 @@
         }
     }
 }
+.searchWrapper{
+
+    & h2{
+        text-align: center;
+    }
+    & .noResults{
+        margin: 15px;
+        color: red;
+        display: block;
+        font-weight: bold;
+    }
+
+    & .trackListContainer .trackList{
+        padding-left: 0;
+    }
+}

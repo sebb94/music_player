@@ -7,7 +7,7 @@ if( isset($_GET['term'])){
     $term = "";
 }
 ?>
-
+<div class="searchWrapper">
 <section class="searchContainer">
 
     <h4>Search for an artist, album or song</h4>
@@ -37,6 +37,13 @@ this.value=''; this.value=temp_value">
     });
 
 </script>
+
+<?php 
+
+    if($term == ""){
+        exit();
+    }
+?>
 
 <div class="tracklistContainer borderBottom">
     <h2>Songs</h2>
@@ -126,3 +133,33 @@ this.value=''; this.value=temp_value">
 
 
 </section>
+ <h2>Albums</h2>
+  <div class="gridViewContainer">
+    
+    <?php 
+    
+    $album_query = mysqli_query( $con, "SELECT * FROM albums WHERE lower(`title`) LIKE lower('$term%') LIMIT 10");
+    if(mysqli_num_rows($album_query) == 0){
+            echo "<span class='noResults'>No artists found matching " .  $term . "</span>";
+        }    
+        
+
+    while( $row = mysqli_fetch_array($album_query) ){
+
+
+        echo "<div class='gridViewItem'>
+            <span role='link' tab-index='0' onclick='openPage(\"album.php?id=" . $row['id'] . "\")'>
+            <img src='" . $row['artworkPath'] . "'>
+            
+            <div class='gridViewInfo'>
+            
+            " . $row['title'] . "
+            
+            </div>
+            </span>
+        </div>";
+    }
+    
+    ?>
+    </div>
+    </div>
