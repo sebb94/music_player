@@ -510,9 +510,12 @@ body {
               width: 0;
               border-radius: 2px; }
 
-.centerSection {
+.artistWrapper h2 {
+  text-align: center; }
+
+.artistWrapper .centerSection {
   width: 100%; }
-  .centerSection .artistInfo {
+  .artistWrapper .centerSection .artistInfo {
     text-align: center; }
-    .centerSection .artistInfo .artistName {
+    .artistWrapper .centerSection .artistInfo .artistName {
       color: #fff; }

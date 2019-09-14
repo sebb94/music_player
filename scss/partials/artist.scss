@@ -1,12 +1,21 @@
-.centerSection{
-    width: 100%;
-    & .artistInfo{
+.artistWrapper{
+
+    & h2{
         text-align: center;
-        & .artistName{
+    }
+.centerSection {
+    width: 100%;
+
+    & .artistInfo {
+        text-align: center;
+
+        & .artistName {
             color: $white;
         }
-        & .headerbuttons{
-            
-        }
+
+        & .headerbuttons {}
     }
 }
+
+}
+

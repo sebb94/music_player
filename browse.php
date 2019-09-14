@@ -16,7 +16,7 @@
             
             <div class='gridViewInfo'>
             
-            " . $row['title'] . "'
+            " . $row['title'] . "
             
             </div>
             </span>
