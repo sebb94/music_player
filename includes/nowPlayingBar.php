@@ -70,6 +70,19 @@ function timeFromOffset(mouse, progressBar){
     let seconds = audioElement.audio.duration * ( percentege / 100);
     audioElement.setTime(seconds);
 }
+function prevSong(){
+
+  
+    if(currentIndex == 0){
+        currentIndex = currentPlayList.length;
+    }
+    if(audioElement.audio.currentTime >= 10){
+        audioElement.setTime(0);
+    }else{
+        currentIndex--;
+        setTrack(currentPlayList[currentIndex],currentPlayList,true );
+    }
+}
 
 function nextSong() {
     if(repeat == true){
@@ -182,7 +195,7 @@ function pauseSong() {
                             <button class="controlButton shuffle" title="Shuffle button"><i class="fa fa-random"
                                     aria-hidden="true"></i></button>
                             <button class="controlButton previous" title="Previous button"><i
-                                    class="fa fa-step-backward" aria-hidden="true"></i></button>
+                                    class="fa fa-step-backward" aria-hidden="true" onclick="prevSong();"></i></button>
                             <button class="controlButton play" title="Play button" onclick="playSong()"><i class="fa fa-play-circle"
                                     aria-hidden="true"></i></button>
                             <button class="controlButton pause" title="Pause button" onclick="pauseSong()"><i
