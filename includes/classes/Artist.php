@@ -15,6 +15,9 @@
             $artist = mysqli_fetch_array($artistQuery);
             return $artist['name'];
         }
+        public function getId(){
+            return $this->id;
+        }
 
         public function getSongIds(){
                  
