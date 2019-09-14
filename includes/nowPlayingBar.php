@@ -94,7 +94,7 @@ function nextSong() {
         playSong();
         return;
     }
-
+    console.log(currentIndex);
 	if(currentIndex == currentPlayList.length - 1) {
 		currentIndex = 0;
 	}
@@ -103,7 +103,8 @@ function nextSong() {
 	}
 
     let trackToPlay = shuffle ? shufflePlayList[currentIndex]  : currentPlayList[currentIndex];
-	setTrack(trackToPlay, currentPlayList, true);
+    setTrack(trackToPlay, currentPlayList, true);
+     console.log(currentIndex);
 }
 function setRepeat(){
     repeat = !repeat;

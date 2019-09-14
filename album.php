@@ -32,31 +32,36 @@ $artist =  $album->getArtist();
             $albumSong = new Song($con, $songId);
             $albumArtist =  $albumSong->getArtist();
 
-            echo '<li class="trackListRow">
-                <div class="trackCount">
-                    <button class="controlButton play" title="Play button"><i class="fa fa-play-circle" aria-hidden="true"></i></button>
-                    <span class="trackNumber">' . $i . '</span>
+            echo "<li class='trackListRow'>
+                <div class='trackCount'>
+                    <button class='controlButton play' title='Play button'><i class='fa fa-play-circle' aria-hidden='true' onclick='setTrack(\"" .  $albumSong->getId() . "\", tempPlayList, true)'></i></button> 
+                    <span class='trackNumber'>" . $i . "</span>
                 </div>
 
-                <div class="trackInfo">
-                    <span class="trackName">' . $albumSong->getTitle() . '</span>
-                    <span class="artistName">' . $albumArtist->getName() . '</span>
+                <div class='trackInfo'>
+                    <span class='trackName'>" . $albumSong->getTitle() . "</span>
+                    <span class='artistName'>" . $albumArtist->getName() . "</span>
                 </div>
 
-                <div class="trackOptions">
-                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                <div class='trackOptions'>
+                    <i class='fa fa-ellipsis-h' aria-hidden='true'></i>
                 </div>
 
-                <div class="trackDuration">
-                    <span class="duration">' . $albumSong->getDuration() . '</span>
+                <div class='trackDuration'>
+                    <span class='duration'>" . $albumSong->getDuration() . "</span>
                 </div>
             </li>
-            ';
+            ";
             $i++;
         }
     
     ?>
 
+    <script>
+        let tempSongsIds = '<?php echo json_encode($songIdArray);?>';
+        tempPlayList = JSON.parse(tempSongsIds);
+        console.log(tempPlayList);
+    </script>
     </ul>
 </div>
 
