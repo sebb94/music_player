@@ -10,17 +10,17 @@
     while( $row = mysqli_fetch_array($album_query) ){
 
 
-        echo '<div class="gridViewItem">
-            <a href="album.php?id=' . $row['id'] . '">
-            <img src="' . $row['artworkPath'] . '">
+        echo "<div class='gridViewItem'>
+            <span role='link' tab-index='0' onclick='openPage(\"album.php?id=" . $row['id'] . "\")'>
+            <img src='" . $row['artworkPath'] . "'>
             
-            <div class="gridViewInfo">
+            <div class='gridViewInfo'>
             
-            "' . $row['title'] . '"
+            " . $row['title'] . "'
             
             </div>
-            </a>
-        </div>';
+            </span>
+        </div>";
     }
     
     ?>
