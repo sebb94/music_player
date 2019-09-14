@@ -1,7 +1,7 @@
     <nav class="navbar">
-                    <a href="index.php" class="logo">
+                    <span  class="logo" onclick="openPage('index.php')";>
                         <i class="fa fa-microphone" aria-hidden="true"></i>
-                    </a>
+                    </span>
 
                     <div class="group">
                         <div class="navItem">

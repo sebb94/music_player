@@ -7,6 +7,17 @@ let currentIndex = 0;
 let repeat = false;
 let shuffle = false;
 
+function openPage(url){
+
+    if(url.indexOf("?") == -1){
+        url = url + "?";
+    }
+    let encodedUrl = encodeURI(url + "&userLoggedIn=" + userLoggedIn);
+    console.log(encodedUrl);
+    $("#mainContent").load(encodedUrl);
+
+}
+
 function formatTime(songsSeconds){
 
     let time = Math.round(songsSeconds);
