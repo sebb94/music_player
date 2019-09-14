@@ -101,6 +101,9 @@ body {
   border-bottom: 1px solid #939393;
   margin-bottom: 20px; }
 
+[role="link"]:hover {
+  cursor: pointer; }
+
 ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #fff; }
