@@ -72,6 +72,12 @@ function timeFromOffset(mouse, progressBar){
 }
 
 function nextSong() {
+    if(repeat == true){
+        audioElement.setTime(0);
+        playSong();
+        return;
+    }
+
 	if(currentIndex == currentPlayList.length - 1) {
 		currentIndex = 0;
 	}
@@ -82,11 +88,21 @@ function nextSong() {
     var trackToPlay = currentPlayList[currentIndex];
 	setTrack(trackToPlay, currentPlayList, true);
 }
+function setRepeat(){
+    repeat = !repeat;
+    let repeatButton =  $("#nowPlayingBar .playerControls .controlButton.repeat i");
+    console.log(repeatButton);
+    console.log(repeat); 
+    let repeatClasses = repeat ? repeatButton.addClass('fa-repeat-active') : repeatButton.removeClass('fa-repeat-active'); 
+   
 
+
+}
 function setTrack(trackId, newPlayList, play){
     audioElement.setTrack("assets/music/bensound-dubstep.mp3");
 
     currentIndex = currentPlayList.indexOf(trackId);
+    pauseSong();
     console.log(play);
     $.post("includes/handlers/ajax/get-song-json.php", {songId : trackId }, function(data){
 
@@ -109,14 +125,15 @@ function setTrack(trackId, newPlayList, play){
 
 
      audioElement.setTrack(track);
-     //playSong();
-    console.log(track);      
+   //  playSong();
+    console.log(track);  
+     if (play == true){
+        playSong();
+    }    
 
     });
 
-    if (play == true){
-    //    playSong();
-    }
+  
 }
 
 function playSong(){
@@ -172,7 +189,7 @@ function pauseSong() {
                                     class="fa fa-pause" aria-hidden="true"></i></button>
                             <button class="controlButton next" title="Next button" onclick="nextSong();"><i class="fa fa-step-forward"
                                     aria-hidden="true"></i></button>
-                            <button class="controlButton repeat" title="Repeat button"><i class="fa fa-repeat"
+                            <button class="controlButton repeat" title="Repeat button" onclick = "setRepeat();"><i class="fa fa-repeat"
                                     aria-hidden="true"></i></button>
                         </div>
                         <div class="playbackBar">
