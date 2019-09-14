@@ -18,3 +18,13 @@
 
 
 }
+.artistsContainer{
+
+    & .searchResultRow{
+        padding: 15px 10px;
+
+        &:hover{
+            background-color: #2a2a2a;
+        }
+    }
+}

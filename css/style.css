@@ -410,6 +410,11 @@ input:focus {
     font-size: 60px;
     letter-spacing: 2px; }
 
+.artistsContainer .searchResultRow {
+  padding: 15px 10px; }
+  .artistsContainer .searchResultRow:hover {
+    background-color: #2a2a2a; }
+
 #nowPlayingBarContainer {
   background-color: #282828;
   width: 100%;

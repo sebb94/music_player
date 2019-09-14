@@ -97,7 +97,7 @@ this.value=''; this.value=temp_value">
     </ul>
 </div>
 
-<div class="artistsContainer borderBottom">
+<section class="artistsContainer borderBottom">
 
         <h2>Artists</h2>
 
@@ -125,4 +125,4 @@ this.value=''; this.value=temp_value">
     ?>
 
 
-</div>
+</section>
