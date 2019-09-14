@@ -20,6 +20,10 @@ function openPage(url){
 
 }
 
+function playFirstSong(){
+    setTrack(tempPlayList[0], tempPlayList, true);
+}
+
 function formatTime(songsSeconds){
 
     let time = Math.round(songsSeconds);
