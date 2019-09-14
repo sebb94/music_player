@@ -202,13 +202,13 @@ function playSong(){
     }
 
 
-    $('.controlButton.play').hide();
-    $('.controlButton.pause').show();
+    $('#nowPlayingBar .controlButton.play').hide();
+    $('#nowPlayingBar .controlButton.pause').show();
     audioElement.play();
 }
 function pauseSong() {
-    $('.controlButton.play').show();
-    $('.controlButton.pause').hide();
+    $('#nowPlayingBar .controlButton.play').show();
+    $('#nowPlayingBar .controlButton.pause').hide();
     audioElement.pause();  
 }
 
