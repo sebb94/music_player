@@ -65,19 +65,29 @@
 
 });
 
-
-
 function timeFromOffset(mouse, progressBar){
     let percentege = mouse.offsetX / $(progressBar).width() * 100;
     let seconds = audioElement.audio.duration * ( percentege / 100);
     audioElement.setTime(seconds);
 }
 
+function nextSong() {
+	if(currentIndex == currentPlayList.length - 1) {
+		currentIndex = 0;
+	}
+	else {
+		currentIndex++;
+	}
 
+    var trackToPlay = currentPlayList[currentIndex];
+	setTrack(trackToPlay, currentPlayList, true);
+}
 
 function setTrack(trackId, newPlayList, play){
     audioElement.setTrack("assets/music/bensound-dubstep.mp3");
 
+    currentIndex = currentPlayList.indexOf(trackId);
+    console.log(play);
     $.post("includes/handlers/ajax/get-song-json.php", {songId : trackId }, function(data){
 
      let track = JSON.parse(data);
@@ -105,7 +115,7 @@ function setTrack(trackId, newPlayList, play){
     });
 
     if (play == true){
-        playSong();
+    //    playSong();
     }
 }
 
@@ -160,7 +170,7 @@ function pauseSong() {
                                     aria-hidden="true"></i></button>
                             <button class="controlButton pause" title="Pause button" onclick="pauseSong()"><i
                                     class="fa fa-pause" aria-hidden="true"></i></button>
-                            <button class="controlButton next" title="Next button"><i class="fa fa-step-forward"
+                            <button class="controlButton next" title="Next button" onclick="nextSong();"><i class="fa fa-step-forward"
                                     aria-hidden="true"></i></button>
                             <button class="controlButton repeat" title="Repeat button"><i class="fa fa-repeat"
                                     aria-hidden="true"></i></button>

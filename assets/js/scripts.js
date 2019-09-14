@@ -1,6 +1,7 @@
 let currentPlayList = [];
 let audioElement;
 let mouseDown = false;
+let currentIndex = 0;
 
 function formatTime(songsSeconds){
 
