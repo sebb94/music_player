@@ -1,0 +1,20 @@
+.searchContainer{
+    background-color: #242424;
+    padding: 20px 28px;
+
+    & h4{
+        margin: 0;
+        font-weight: 300;
+    }
+    & .searchInput{
+        width: 100%;
+        background: transparent;
+        border:none;
+        color: $white;
+        font-weight: 700;
+        font-size: 60px;
+        letter-spacing: 2px;
+    }
+
+
+}

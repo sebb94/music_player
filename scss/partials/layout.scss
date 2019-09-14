@@ -45,6 +45,9 @@ body {
 [role="link"]:hover{
     cursor: pointer;
 }
+input:focus{
+    outline: none;
+}
 ::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
     color: $white;

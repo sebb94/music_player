@@ -104,6 +104,9 @@ body {
 [role="link"]:hover {
   cursor: pointer; }
 
+input:focus {
+  outline: none; }
+
 ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #fff; }
@@ -391,6 +394,21 @@ body {
     .tracklistContainer .tracklist .trackListRow .trackDuration {
       width: 20%;
       text-align: center; }
+
+.searchContainer {
+  background-color: #242424;
+  padding: 20px 28px; }
+  .searchContainer h4 {
+    margin: 0;
+    font-weight: 300; }
+  .searchContainer .searchInput {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 60px;
+    letter-spacing: 2px; }
 
 #nowPlayingBarContainer {
   background-color: #282828;
