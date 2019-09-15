@@ -24,6 +24,21 @@ function openPage(url){
     history.pushState(null,null,url);
 
 }
+function createPlayList(username){
+
+    let alert = prompt("Please enter the name of your Playlist");
+
+    if (alert != null){
+        $.post("include/handlers/ajax/createPlayList.php", 
+        {name: alert,
+        username: username
+    }).done(function(){
+        opnePage("yourMusic.php");
+    });
+    }
+
+}
+
 
 function playFirstSong(){
     setTrack(tempPlayList[0], tempPlayList, true);

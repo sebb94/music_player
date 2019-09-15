@@ -6,7 +6,7 @@
 
         <div class="buttonItems">
         
-            <button class="btn btn-deafault">New Playlist</button>
+            <button class="btn btn-deafault" onclick="createPlayList('asd');">New Playlist</button>
 
         </div>
     
