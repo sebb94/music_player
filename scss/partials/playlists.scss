@@ -32,3 +32,20 @@
 
     }
 }
+
+.playListPage{
+
+    & .leftSection{
+
+        & i{
+            font-size: 150px;
+        }
+    }
+
+    & .rightSection{
+        & .btn{
+            margin-top:20px;
+        }
+    }
+
+}

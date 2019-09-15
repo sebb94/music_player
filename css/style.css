@@ -446,6 +446,12 @@ input:focus {
   border: 3px solid #939393;
   padding: 20px; }
 
+.playListPage .leftSection i {
+  font-size: 150px; }
+
+.playListPage .rightSection .btn {
+  margin-top: 20px; }
+
 #nowPlayingBarContainer {
   background-color: #282828;
   width: 100%;
