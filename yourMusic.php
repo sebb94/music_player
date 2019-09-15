@@ -25,10 +25,10 @@
     while( $row = mysqli_fetch_array($playlistsQuery) ){
 
         $playlist = new Playlist($con, $row);
-        echo "<div class='gridViewItem'>
+        echo "<div class='gridViewItem' role='link' tabindex='0' onclick='openPage(\"playlist.php?id=". $playlist->getId() . "\")'>
 
             <div class='playListImage'>
-                <img src='assets/images/playlist.png'>
+                <i class='fa fa-music' aria-hidden='true'></i>
             
             </div>
           
