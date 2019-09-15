@@ -37,8 +37,12 @@
 
     & .leftSection{
 
-        & i{
-            font-size: 150px;
+        & .fa-music{
+            font-size: 200px;
+            margin-bottom: 10px;
+            color: #939393;
+            border: 3px solid #939393;
+            padding: 20px;
         }
     }
 

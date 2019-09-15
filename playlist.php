@@ -27,21 +27,22 @@ $owner = new User($con, $playlist->getOwner());
 
     <?php $songIdArray = array(); 
     
+    $songIdArray = $playlist->getSongsIds();
         $i = 1;
         foreach( $songIdArray as $songId){
 
-            $albumSong = new Song($con, $songId);
-            $albumArtist =  $albumSong->getArtist();
+            $playlistSong = new Song($con, $songId);
+            $songArtist =  $playlistSong->getArtist();
 
             echo "<li class='trackListRow'>
                 <div class='trackCount'>
-                    <button class='controlButton play' title='Play button'><i class='fa fa-play-circle' aria-hidden='true' onclick='setTrack(\"" .  $albumSong->getId() . "\", tempPlayList, true)'></i></button> 
+                    <button class='controlButton play' title='Play button'><i class='fa fa-play-circle' aria-hidden='true' onclick='setTrack(\"" .  $playlistSong->getId() . "\", tempPlayList, true)'></i></button> 
                     <span class='trackNumber'>" . $i . "</span>
                 </div>
 
                 <div class='trackInfo'>
-                    <span class='trackName'>" . $albumSong->getTitle() . "</span>
-                    <span class='artistName'>" . $albumArtist->getName() . "</span>
+                    <span class='trackName'>" . $playlistSong->getTitle() . "</span>
+                    <span class='artistName'>" . $songArtist->getName() . "</span>
                 </div>
 
                 <div class='trackOptions'>
@@ -49,7 +50,7 @@ $owner = new User($con, $playlist->getOwner());
                 </div>
 
                 <div class='trackDuration'>
-                    <span class='duration'>" . $albumSong->getDuration() . "</span>
+                    <span class='duration'>" . $playlistSong->getDuration() . "</span>
                 </div>
             </li>
             ";
