@@ -432,8 +432,10 @@ input:focus {
   text-align: center; }
 
 .playlistsContainer .gridViewContainer .buttonItems {
-  display: block;
-  margin: 0 auto; }
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  width: 100%; }
   .playlistsContainer .gridViewContainer .buttonItems .btn {
     margin-bottom: 20px; }
 

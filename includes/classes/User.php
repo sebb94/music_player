@@ -7,10 +7,12 @@
 
         public function __construct($con , $username){
             $this->con = $con;
-            $this->id = $username; 
+            $this->username = $username; 
         }
 
-        public 
+        public function getUsername(){
+            return $this->username;
+        }
 
     }
 ?>
