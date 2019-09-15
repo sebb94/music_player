@@ -427,6 +427,16 @@ input:focus {
 .searchWrapper .trackListContainer .trackList {
   padding-left: 0; }
 
+.playlistsContainer .gridViewContainer h2 {
+  width: 100%;
+  text-align: center; }
+
+.playlistsContainer .gridViewContainer .buttonItems {
+  display: block;
+  margin: 0 auto; }
+  .playlistsContainer .gridViewContainer .buttonItems .btn {
+    margin-bottom: 20px; }
+
 #nowPlayingBarContainer {
   background-color: #282828;
   width: 100%;
