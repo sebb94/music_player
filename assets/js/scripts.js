@@ -43,7 +43,22 @@ function createPlayList() {
     }
 
 }
+function deletePlayList(playlistId) {
 
+    let message = confirm("Are you sure You want to delete this Playlist");
+    if (message) {
+        $.post("includes/handlers/ajax/deletePlayList.php", {
+           playlistId: playlistId
+        }).done(function (error) {
+            if (error != "") {
+                alert(error);
+                return;
+            }
+            openPage("yourMusic.php");
+        });
+    }
+
+}
 
 function playFirstSong() {
     setTrack(tempPlayList[0], tempPlayList, true);
