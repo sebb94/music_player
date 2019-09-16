@@ -35,7 +35,7 @@ $(document).on("change", "select.playlist", function(){
          }
        
          hideOptionsMenu();
-         select.val();
+         select.val("");
      });
     
 
