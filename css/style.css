@@ -330,6 +330,24 @@ input:focus {
             white-space: nowrap;
             width: 100%;
             transition: all .4s; }
+      #mainContainer #topContainer #mainViewContainer #mainContent .optionsMenu {
+        background: #282828;
+        width: 200px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 3px;
+        z-index: 1000;
+        display: none;
+        position: fixed; }
+        #mainContainer #topContainer #mainViewContainer #mainContent .optionsMenu .item {
+          width: 100%;
+          padding: 12px 20px;
+          box-sizing: border-box;
+          font-weight: 400;
+          color: #a0a0a0;
+          cursor: pointer;
+          height: 40px; }
+          #mainContainer #topContainer #mainViewContainer #mainContent .optionsMenu .item:hover {
+            color: #fff; }
 
 .entityInfo {
   padding: 40px 0 10px 0;
