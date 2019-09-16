@@ -20,10 +20,24 @@ $(document).on('click',function(e){
 });
 
 $(document).on("change", "select.playlist", function(){
-    let playlistId = $(this).val();
-    let songId = $(this).prev(".songId").val();
-    console.log("p id:" +playlistId);
-    console.log("s id:" + songId);
+    
+    let select = $(this);
+    let playlistId = select.val();
+    let songId = select.prev(".songId").val();
+
+     $.post("includes/handlers/ajax/add-to-playlist.php", {
+         playlistId: playlistId,
+         songId : songId
+     }).done(function (error) {
+         if (error != "") {
+             alert(error);
+             return;
+         }
+       
+         hideOptionsMenu();
+         select.val();
+     });
+    
 
 });
 
