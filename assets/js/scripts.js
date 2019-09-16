@@ -8,6 +8,17 @@ let repeat = false;
 let shuffle = false;
 let timer;
 
+$(window).scroll(function () {
+    hideOptionsMenu();    
+})
+
+$(document).on('click',function(e){
+    let target = $(e.target);
+    if (!target.hasClass('item') && !target.hasClass('optionsButton')){
+       hideOptionsMenu();
+    }
+})
+
 function openPage(url) {
 
     if (timer != null) {
@@ -59,6 +70,14 @@ function deletePlayList(playlistId) {
     }
 
 }
+function hideOptionsMenu(){
+     let menu = $(".optionsMenu");
+     if(menu.css("display") != "none"){
+         menu.css("display","none");
+     }
+
+}
+
 
 function showOptionsMenu(button){
     
