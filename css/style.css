@@ -82,6 +82,10 @@ body {
   height: 100%;
   min-width: 720px; }
 
+option, select {
+  color: #fff;
+  background: #282828; }
+
 .btn {
   color: #fff;
   cursor: pointer;

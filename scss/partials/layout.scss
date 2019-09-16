@@ -22,6 +22,10 @@ body {
     height: 100%;
     min-width: 720px;
 }
+option,select{
+    color: $white;
+    background: #282828;
+}
 .btn{
     color: $white;
     cursor: pointer;
