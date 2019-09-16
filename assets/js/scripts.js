@@ -60,6 +60,21 @@ function deletePlayList(playlistId) {
 
 }
 
+function showOptionsMenu(button){
+    
+    let menu = $(".optionsMenu");
+    let menuWidth = menu.width();
+    let scrollTop = $(window).scrollTop();
+    let elementOffset = $(button).offset().top;
+    let top = elementOffset - scrollTop;
+    let left = $(button).position().left;
+
+    menu.css({"top" : top + "px", "left" : left - menuWidth + "px", "display": "inline" })
+
+
+}
+
+
 function playFirstSong() {
     setTrack(tempPlayList[0], tempPlayList, true);
 }
