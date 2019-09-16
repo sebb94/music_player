@@ -82,7 +82,8 @@ this.value=''; this.value=temp_value" spellcheck="false">
                 </div>
 
                 <div class='trackOptions'>
-                    <i class='fa fa-ellipsis-h' aria-hidden='true'></i>
+                    <input type='hidden' class='songId' value='" . $albumSong->getId() . "'>
+                    <i class='fa fa-ellipsis-h optionsButton' aria-hidden='true' onclick='showOptionsMenu(this)'></i>
                 </div>
 
                 <div class='trackDuration'>
@@ -162,3 +163,5 @@ this.value=''; this.value=temp_value" spellcheck="false">
     ?>
     </div>
     </div>
+
+    <?php include("/includes/buttonOptions.php");?>

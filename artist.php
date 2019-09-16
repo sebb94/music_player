@@ -54,7 +54,8 @@ $artist = new Artist($con, $artistId);
                 </div>
 
                 <div class='trackOptions'>
-                    <i class='fa fa-ellipsis-h' aria-hidden='true'></i>
+                    <input type='hidden' class='songId' value='" . $albumSong->getId() . "'>
+                    <i class='fa fa-ellipsis-h optionsButton' aria-hidden='true' onclick='showOptionsMenu(this)'></i>
                 </div>
 
                 <div class='trackDuration'>
@@ -100,3 +101,5 @@ $artist = new Artist($con, $artistId);
     ?>
     </div>
 </section>
+
+<?php include("/includes/buttonOptions.php");?>

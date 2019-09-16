@@ -46,7 +46,8 @@ $owner = new User($con, $playlist->getOwner());
                 </div>
 
                 <div class='trackOptions'>
-                    <i class='fa fa-ellipsis-h' aria-hidden='true'></i>
+                    <input type='hidden' class='songId' value='" . $playlistSong->getId() . "'>
+                    <i class='fa fa-ellipsis-h optionsButton' aria-hidden='true' onclick='showOptionsMenu(this)'></i>
                 </div>
 
                 <div class='trackDuration'>
@@ -67,3 +68,5 @@ $owner = new User($con, $playlist->getOwner());
     </ul>
 </div>
 </section>
+
+<?php include("/includes/buttonOptions.php");?>
