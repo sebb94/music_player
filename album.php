@@ -44,6 +44,7 @@ $artist =  $album->getArtist();
                 </div>
 
                 <div class='trackOptions'>
+                    <input type='hidden' class='songId' value='" . $albumSong->getId() . "'>
                     <i class='fa fa-ellipsis-h optionsButton' aria-hidden='true' onclick='showOptionsMenu(this)'></i>
                 </div>
 
