@@ -1,8 +1,8 @@
 <?php 
     class Constants{
 
-        public static $passwordsDoNotMatch = "Your passwords not don't match!";
-        public static $passwordNotAplhanumeric = "Your passwords can only contain numbers and letters match!";
+        public static $passwordsDoNotMatch = "Your passwords don't match!";
+        public static $passwordNotAplhanumeric = "Your passwords can only contain numbers and letters!";
         public static $passwordCharacters = "Your password must be between 5 and 30 characters!";
         public static $emailInvalid = "Emails is invalid!";
         public static $emailTaken = "Email already exist!";

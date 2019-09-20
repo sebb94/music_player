@@ -4,7 +4,7 @@ include("includes/includedFiles.php");
 
 <section class="userDetails">
 
-    <div class="container borderBottom">
+    <div class="container email-container borderBottom">
         <h2>EMAILS</h2>
         <input type="email" class="email" name="email" placeholder="Email address..." value="<?php echo $userLoggedIn->getEmail();?>" required>
         <span class="errorMessage">
@@ -13,11 +13,11 @@ include("includes/includedFiles.php");
         <button class="btn" onclick="updateEmail();">SAVE</button>
     </div>
 
-    <div class="container">
+    <div class="container password-container">
         <h2>PASSWORD</h2>
         <input type="password" class="oldPassword" name="oldPassword" placeholder="Current password...">
-        <input type="password" class="newPasswod1" name="newPasswod1" placeholder="New password...">
-        <input type="password" class="newPasswod2" name="newPasswod2" placeholder="Confirm new password...">
+        <input type="password" class="newPassword1" name="newPassword1" placeholder="New password...">
+        <input type="password" class="newPassword2" name="newPassword2" placeholder="Confirm new password...">
         <span class="errorMessage">
 
         </span>

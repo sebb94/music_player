@@ -33,6 +33,33 @@ function updateEmail(){
 
 }
 
+function updatePassword() {
+
+    let old = $('.password-container .oldPassword').val();
+    let pw1 = $('.password-container .newPassword1').val();
+    let pw2 = $('.password-container .newPassword2').val();
+    
+
+    $.post("includes/handlers/ajax/update-password.php", {
+        userLoggedIn: userLoggedIn,
+        old: old,
+        pw1 : pw1,
+        pw2 : pw2,
+
+    }).done(function (error) {
+        if (error != "") {
+            $('.password-container .errorMessage').addClass('red').text(error);
+            $('.password-container .oldPassword').val("");
+            $('.password-container .newPassword1').val("");
+            $('.password-container .newPassword2').val("");
+            return;
+        }
+        $('.password-container .errorMessage').removeClass('red').text("Password updated!");
+    });
+
+
+}
+
 $(window).scroll(function () {
     hideOptionsMenu();    
 });
