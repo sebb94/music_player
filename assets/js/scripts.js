@@ -15,6 +15,24 @@ function logout(){
     });
 }
 
+function updateEmail(){
+    
+    let email = $('.userDetails .email').val();
+
+    $.post("includes/handlers/ajax/update-email.php", {
+        userLoggedIn: userLoggedIn,
+        email: email
+    }).done(function (error) {
+        if (error != "") {
+           $('.container.borderBottom .errorMessage').addClass('red').text(error);
+           return;
+        }
+        $('.container.borderBottom .errorMessage').removeClass('red').text("Email updated!");
+    });
+
+
+}
+
 $(window).scroll(function () {
     hideOptionsMenu();    
 });

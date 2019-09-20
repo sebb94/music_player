@@ -645,3 +645,7 @@ input:focus {
     color: #fff;
     border: none;
     outline: none; }
+  .userDetails .container .errorMessage {
+    color: #2ebd59; }
+  .userDetails .container .red {
+    color: red; }

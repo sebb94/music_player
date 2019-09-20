@@ -6,11 +6,11 @@ include("includes/includedFiles.php");
 
     <div class="container borderBottom">
         <h2>EMAILS</h2>
-        <input type="text" class="email" name="email" placeholder="Email address..." value="<?php echo $userLoggedIn->getEmail();?>">
+        <input type="email" class="email" name="email" placeholder="Email address..." value="<?php echo $userLoggedIn->getEmail();?>" required>
         <span class="errorMessage">
 
         </span>
-        <button class="btn" onclick="">SAVE</button>
+        <button class="btn" onclick="updateEmail();">SAVE</button>
     </div>
 
     <div class="container">
@@ -21,7 +21,7 @@ include("includes/includedFiles.php");
         <span class="errorMessage">
 
         </span>
-        <button class="btn" onclick="">SAVE</button>
+        <button class="btn" onclick="updatePassword();">SAVE</button>
     </div>
 
 
