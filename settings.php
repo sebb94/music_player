@@ -10,8 +10,8 @@ include("includes/includedFiles.php");
         </div>
 
         <div class="buttonItems">
-            <button class="btn">USER DETAILS</button>
-            <button class="btn">Logout</button>
+            <button class="btn" onclick="openPage('updateDetails.php')">USER DETAILS</button>
+            <button class="btn" onclick="logout();">Logout</button>
         </div>
 
     </div>

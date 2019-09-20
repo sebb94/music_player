@@ -8,6 +8,13 @@ let repeat = false;
 let shuffle = false;
 let timer;
 
+function logout(){
+
+    $.post("includes/handlers/ajax/logout.php", function(){
+        location.reload();
+    });
+}
+
 $(window).scroll(function () {
     hideOptionsMenu();    
 });
