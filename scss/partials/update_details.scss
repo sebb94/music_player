@@ -1,0 +1,36 @@
+.userDetails {
+    padding: 20px;
+
+    & .container {
+        & h2 {
+            text-align: center;
+        }
+
+        & input[type="text"],
+        & input[type="password"],
+        & input[type="email"],
+        & .btn{
+            display: block;
+            margin: 16px auto;
+        }
+
+        & input[type="text"],
+        & input[type="password"],
+        & input[type="email"]{
+
+            height: 50px;
+            width: 100%;
+            background: #4e4e4e;
+            font-size: 18px;
+            font-weight: 300;
+            padding: 0 30px;
+            color: $white;
+            border:none;
+            outline: none;
+        }
+
+    }
+
+
+
+}

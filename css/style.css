@@ -622,3 +622,26 @@ input:focus {
     text-align: center; }
     .artistWrapper .centerSection .artistInfo .artistName {
       color: #fff; }
+
+.userDetails {
+  padding: 20px; }
+  .userDetails .container h2 {
+    text-align: center; }
+  .userDetails .container input[type="text"],
+  .userDetails .container input[type="password"],
+  .userDetails .container input[type="email"],
+  .userDetails .container .btn {
+    display: block;
+    margin: 16px auto; }
+  .userDetails .container input[type="text"],
+  .userDetails .container input[type="password"],
+  .userDetails .container input[type="email"] {
+    height: 50px;
+    width: 100%;
+    background: #4e4e4e;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0 30px;
+    color: #fff;
+    border: none;
+    outline: none; }

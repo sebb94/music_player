@@ -10,7 +10,7 @@ include("includes/includedFiles.php");
         <span class="errorMessage">
 
         </span>
-        <button class="button" onclick="">SAVE</button>
+        <button class="btn" onclick="">SAVE</button>
     </div>
 
     <div class="container">
@@ -21,7 +21,7 @@ include("includes/includedFiles.php");
         <span class="errorMessage">
 
         </span>
-        <button class="button" onclick="">SAVE</button>
+        <button class="btn" onclick="">SAVE</button>
     </div>
 
 
