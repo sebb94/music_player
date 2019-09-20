@@ -1,12 +1,15 @@
 <?php 
 include("includes/config.php");
+include("includes/classes/User.php");
+include("includes/classes/Playlist.php");
 include("includes/classes/Artist.php");
 include("includes/classes/Album.php");
 include("includes/classes/Song.php");
 //logout manually
 //session_destroy();
 if (isset($_SESSION['userLoggedIn'])){
-    $username =  $_SESSION['userLoggedIn'];
+     $userLoggedIn = new User($con, $_SESSION['userLoggedIn']);
+     $username = $userLoggedIn->getUsername();
     echo "<script>let userLoggedIn = '" . $username . "'; </script>";
 }else{
     header("Location:register.php");
