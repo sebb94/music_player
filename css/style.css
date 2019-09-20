@@ -479,6 +479,19 @@ input:focus {
 .playListPage .rightSection .btn {
   margin-top: 20px; }
 
+.settingsWrapper .entityInfo {
+  flex-direction: column; }
+  .settingsWrapper .entityInfo .centerSection {
+    width: 100%; }
+    .settingsWrapper .entityInfo .centerSection .userInfo h1 {
+      text-align: center; }
+  .settingsWrapper .entityInfo .buttonItems {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 0 auto;
+    width: 50%; }
+
 #nowPlayingBarContainer {
   background-color: #282828;
   width: 100%;

@@ -1,0 +1,32 @@
+.settingsWrapper{
+
+    & .entityInfo {
+        flex-direction: column;
+            & .centerSection {
+                width: 100%;
+
+                & .userInfo {
+
+                    & h1 {
+                        text-align: center;
+                    }
+                }
+
+              
+            }
+
+              & .buttonItems {
+                  display: flex;
+                  justify-content: space-evenly;
+                  width: 80%;
+                  margin: 0 auto;
+                     width: 50%;
+                  & .btn {
+                     
+                  }
+              }
+
+    }
+
+
+}
