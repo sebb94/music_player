@@ -37,6 +37,7 @@
                 // Insert into DB
             $_SESSION['userLoggedIn'] = $un;
             $this->insertUserDetils( $un, $fn, $ln, $em, $pw);
+            $this->setDefaultColor($un);
             header("Location:index.php");
             return;
             }else{
@@ -51,12 +52,25 @@
 
         }
 
+        private function setDefaultColor($un){
+            
+            $query = mysqli_query($this->con, "SELECT id,username FROM users WHERE username='$un'");
+            $row = mysqli_fetch_array($query);
+            $id = $row['id'];
+            $colorQuery = mysqli_query($this->con, "INSERT INTO user_colors_settings VALUES('', '$id', '$un', '	#3e3e3e', '	#000000','#282828')");
+    
+            return $colorQuery;
+
+        }
+
         private function insertUserDetils( $un, $fn, $ln, $em, $pw){
             $encryptedPw = hash('sha512', $pw);
             $profilePic = "assets/images/profile-pics/picture1.png";
             $date = date("Y-m-d");
 
             $result = mysqli_query($this->con, "INSERT INTO users VALUES( '', '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic')");
+            
+           
 
             return $result;
         }

@@ -28,7 +28,7 @@ if (isset($_SESSION['userLoggedIn'])){
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/colorpicker.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-
+    <link rel="stylesheet"  media="screen" href="css/user_style.php" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c9c259af04.js"></script>

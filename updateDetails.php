@@ -30,7 +30,7 @@ include("includes/includedFiles.php");
     <div class="colorSectionItem">
             <h3>Main background color:</h3>
             <div id="cp1" class="input-group colorpicker-component">
-                <input type="hidden" name="cp1" value="#3e3e3e" class="form-control" />
+                <input type="hidden" class="cp1" name="cp1" value="#3e3e3e" class="form-control" />
                 <span class="input-group-addon"><i></i></span>
             </div>
     </div>
@@ -38,7 +38,7 @@ include("includes/includedFiles.php");
        <div class="colorSectionItem">
             <h3>Sidebar background color:</h3>
             <div id="cp2" class="input-group colorpicker-component">
-                <input type="hidden" name="cp2" value="#000" class="form-control" />
+                <input type="hidden" class="cp2" name="cp2" value="#000" class="form-control" />
                 <span class="input-group-addon"><i></i></span>
             </div>
     </div>
@@ -46,7 +46,7 @@ include("includes/includedFiles.php");
        <div class="colorSectionItem">
             <h3>Now Playing Bar background color:</h3>
             <div id="cp3" class="input-group colorpicker-component">
-                <input type="hidden" name="cp3" value="#282828" class="form-control" />
+                <input type="hidden" class="cp3" name="cp3" value="#282828" class="form-control" />
                 <span class="input-group-addon"><i></i></span>
             </div>
     </div>

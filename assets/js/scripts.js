@@ -35,17 +35,21 @@ function updateEmail(){
 
 function updateColors() {
 
-    let email = $('.userDetails .email').val();
-
-    $.post("includes/handlers/ajax/update-email.php", {
+    let main = $('#cp1 .cp1').val();
+    let sidebar = $('#cp2 .cp2').val();
+    let bar = $('#cp3 .cp3').val();
+    alert(main);
+    $.post("includes/handlers/ajax/update-colors.php", {
         userLoggedIn: userLoggedIn,
-        email: email
+        main: main,
+        sidebar: sidebar,
+        bar : bar
     }).done(function (error) {
         if (error != "") {
             alert(error);
             return;
         }
-        location.reload();
+
     });
 
 
