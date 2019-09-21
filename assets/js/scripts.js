@@ -33,6 +33,24 @@ function updateEmail(){
 
 }
 
+function updateColors() {
+
+    let email = $('.userDetails .email').val();
+
+    $.post("includes/handlers/ajax/update-email.php", {
+        userLoggedIn: userLoggedIn,
+        email: email
+    }).done(function (error) {
+        if (error != "") {
+            alert(error);
+            return;
+        }
+        location.reload();
+    });
+
+
+}
+
 function updatePassword() {
 
     let old = $('.password-container .oldPassword').val();

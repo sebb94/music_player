@@ -353,6 +353,28 @@ input:focus {
           #mainContainer #topContainer #mainViewContainer #mainContent .optionsMenu .item:hover {
             color: #fff; }
 
+.colorSection {
+  background-color: #000; }
+  .colorSection .colorSectionItem {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding: 5px 0; }
+    .colorSection .colorSectionItem h3 {
+      margin-right: 20px;
+      min-width: 350px;
+      text-align: center; }
+    .colorSection .colorSectionItem .input-group {
+      width: 100px; }
+      .colorSection .colorSectionItem .input-group .input-group-addon i {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #fff;
+        border-radius: 3px; }
+  .colorSection .btn {
+    display: block;
+    margin: 0 auto; }
+
 .entityInfo {
   padding: 40px 0 10px 0;
   display: flex; }
