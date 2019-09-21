@@ -38,7 +38,6 @@ function updateColors() {
     let main = $('#cp1 .cp1').val();
     let sidebar = $('#cp2 .cp2').val();
     let bar = $('#cp3 .cp3').val();
-    alert(main);
     $.post("includes/handlers/ajax/update-colors.php", {
         userLoggedIn: userLoggedIn,
         main: main,
@@ -49,7 +48,7 @@ function updateColors() {
             alert(error);
             return;
         }
-
+        location.reload();
     });
 
 

@@ -11,7 +11,7 @@ include("includes/classes/Song.php");
         $userLoggedIn = new User($con, $_GET['userLoggedIn']);
     }else{
         echo "username variable was not passed into page";
-        exti();
+        exit();
     }
 
 }else{

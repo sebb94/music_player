@@ -1,21 +1,39 @@
-<?php
+<?php 
+
+
+include("../includes/config.php");
+include("../includes/classes/User.php");
+include("../includes/handlers/colors-handler.php");
+//logout manually
+//session_destroy();
+if (isset($_SESSION['userLoggedIn'])){
+     $userLoggedIn = new User($con, $_SESSION['userLoggedIn']);
+     $username = $userLoggedIn->getUsername();
+}
+
+$main = getColors($username, 'main');
+$sidebar = getColors($username, 'sidebar');
+$bar = getColors($username, 'bar');
+
+
+
+
 /*** set the content type header ***/
 header("Content-type: text/css");
 
 
 
 
-/** set the paragraph color ***/
-$para_color = '#0000ff';
 
-/*** set the heading size ***/
-$heading_size = '2em';
-
-/*** set the heading color ***/
-$heading_color = '#c0c0c0';
 ?>
 
-html{
-    background: <?php echo $para_color; ?>
+#mainContainer #topContainer #navBarContainer{
+    background: <?php echo $sidebar; ?>
+}
+#nowPlayingBarContainer {
+    background: <?php echo $bar;?>
+}
+body{
+    background: <?php echo $main;?>
 }
 

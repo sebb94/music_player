@@ -1,5 +1,7 @@
 <?php 
 include("includes/includedFiles.php");
+include("includes/handlers/colors-handler.php");
+$username = $userLoggedIn->getUsername();
 ?>
 
 <section class="userDetails">
@@ -27,27 +29,35 @@ include("includes/includedFiles.php");
 
     <div class="colorSection">
 
+   <?php 
+
+    $main = "main";
+    $sidebar = "sidebar";
+    $bar = "bar";
+
+   ?>
+
     <div class="colorSectionItem">
             <h3>Main background color:</h3>
             <div id="cp1" class="input-group colorpicker-component">
-                <input type="hidden" class="cp1" name="cp1" value="#3e3e3e" class="form-control" />
-                <span class="input-group-addon"><i></i></span>
+                <input type="hidden" class="cp1" name="cp1" value="<?php echo getColors($username, $main);?>" class="form-control" />
+                <span class="input-group-addon"><i style="background-color:<?php echo getColors($username, $main);?>"></i></span>
             </div>
     </div>
 
        <div class="colorSectionItem">
             <h3>Sidebar background color:</h3>
             <div id="cp2" class="input-group colorpicker-component">
-                <input type="hidden" class="cp2" name="cp2" value="#000" class="form-control" />
-                <span class="input-group-addon"><i></i></span>
+                <input type="hidden" class="cp2" name="cp2" value="<?php echo getColors($username, $sidebar);?>" class="form-control" />
+                <span class="input-group-addon"><i style="background-color:<?php echo getColors($username, $sidebar);?>"></i></span>
             </div>
     </div>
 
        <div class="colorSectionItem">
             <h3>Now Playing Bar background color:</h3>
             <div id="cp3" class="input-group colorpicker-component">
-                <input type="hidden" class="cp3" name="cp3" value="#282828" class="form-control" />
-                <span class="input-group-addon"><i></i></span>
+                <input type="hidden" class="cp3" name="cp3" value="<?php echo getColors($username, $bar);?>" class="form-control" />
+                <span class="input-group-addon"><i style="background-color:<?php echo getColors($username, $bar);?>"></i></span>
             </div>
     </div>
 
